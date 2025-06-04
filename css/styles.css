@@ -230,8 +230,7 @@
 
 /* Product Range Section */
 .product-range {
-  padding: 3rem 0;
-  margin-bottom: 3rem;
+  padding: 3rem 0; 
 }
 
 .section-title {
@@ -347,8 +346,7 @@
 
 /* Featured Products Section */
 .featured-products {
-  padding: 3rem 0;
-  margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 .featured-slider {
@@ -441,7 +439,7 @@
 
 /* Explore Designs Section */
 .explore-designs {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .section-header {
@@ -542,7 +540,7 @@
 
 /* Featured Artists Section */
 .featured-artists {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .featured-artists-grid {

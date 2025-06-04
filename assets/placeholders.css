@@ -1,4 +1,4 @@
-/* Placeholder for product cards and images */
+Placeholder for product cards and images
 
 /* Product Card Placeholders */
 .product-card-placeholder {
@@ -33,7 +33,7 @@
 }
 
 /* Specific product card placeholders */
-.product-card:nth-child(1) {
+/* .product-card:nth-child(1) {
   background-image: url('../assets/images/placeholders/tshirt-card.jpg');
   background-size: cover;
   background-position: center;
@@ -85,52 +85,52 @@
   background-image: url('../assets/images/placeholders/home-living-card.jpg');
   background-size: cover;
   background-position: center;
-}
+} */
 
 /* Featured product placeholders */
-.featured-product-image {
+ .featured-product-image {
   background-size: cover;
   background-position: center;
 }
 
 .featured-product:nth-child(1) .featured-product-image {
-  background-image: url('../assets/images/placeholders/poster-card.jpg');
+  background-image: url('../assets/images/featured-products/holy-mackerel.jpg');
 }
 
 .featured-product:nth-child(2) .featured-product-image {
-  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+  background-image: url('../assets/images/featured-products/mondrian-laptop.jpg');
 }
 
 .featured-product:nth-child(3) .featured-product-image {
-  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+  background-image: url('../assets/images/featured-products/hangry-fitted.jpg');
 }
 
 .featured-product:nth-child(4) .featured-product-image {
-  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+  background-image: url('../assets/images/featured-products/save-your-soul.jpg');
 }
 
 .featured-product:nth-child(5) .featured-product-image {
-  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+  background-image: url('../assets/images/featured-products/ramona-spiral.jpg');
 }
 
 .featured-product:nth-child(6) .featured-product-image {
-  background-image: url('../assets/images/placeholders/hoodie-card.jpg');
+  background-image: url('../assets/images/featured-products/Unpuzzled Sticker.jpg');
 }
 
 .featured-product:nth-child(7) .featured-product-image {
-  background-image: url('../assets/images/placeholders/phone-case-card.jpg');
+  background-image: url('../assets/images/featured-products/Multicolor\ Pattern\ Scarf.jpg');
 }
 
 .featured-product:nth-child(8) .featured-product-image {
-  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+  background-image: url('../assets/images/featured-products/Strawberry-Zipper-Pouch.jpg');
 }
 
 .featured-product:nth-child(9) .featured-product-image {
-  background-image: url('../assets/images/placeholders/gift-card.jpg');
+  background-image: url('../assets/images/featured-products/comic-farmed-art.jpg');
 }
 
 .featured-product:nth-child(10) .featured-product-image {
-  background-image: url('../assets/images/placeholders/poster-card.jpg');
+  background-image: url('../assets/images/featured-products/nipo-sticker.jpg');
 }
 
 /* Design card placeholders */
@@ -140,23 +140,45 @@
 }
 
 .design-card:nth-child(1) .design-card-image {
-  background-image: url('../assets/images/placeholders/poster-card.jpg');
+  background-image: url('../assets/images/designs/sunrise-orange-pink.jpg');
 }
 
 .design-card:nth-child(2) .design-card-image {
-  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+  background-image: url('../assets/images/designs/stitch-art.jpg');
 }
 
 .design-card:nth-child(3) .design-card-image {
-  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+  background-image: url('../assets/images/designs/phi.jpg');
 }
 
 .design-card:nth-child(4) .design-card-image {
-  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+  background-image: url('../assets/images/designs/muscle-frog.jpg');
 }
 
 .design-card:nth-child(5) .design-card-image {
-  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+  background-image: url('../assets/images/designs/gates-love-inspiration.jpg');
+}
+
+/* Artist card placeholders */
+.artist-card-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.artist-card:nth-child(1) .artist-card-image {
+  background-image: url('../assets/images/artirts/Perrin\ Le\ Feuvre.jpg');
+}
+
+.artist-card:nth-child(2) .artist-card-image {
+  background-image: url('../assets/images/artirts/Atomic-Charm.jpg');
+}
+
+.artist-card:nth-child(3) .artist-card-image {
+  background-image: url('../assets/images/artirts/crestfallenmermaid.jpg');
+}
+
+.artist-card:nth-child(4) .artist-card-image {
+  background-image: url('../assets/images/artirts/johnnybuzt.jpg');
 }
 
 /* Fan art product placeholders */
@@ -183,28 +205,6 @@
 
 .fan-art-product:nth-child(5) .fan-art-product-image {
   background-image: url('../assets/images/placeholders/tshirt-card.jpg');
-}
-
-/* Artist card placeholders */
-.artist-card-image {
-  background-size: cover;
-  background-position: center;
-}
-
-.artist-card:nth-child(1) .artist-card-image {
-  background-image: url('../assets/images/placeholders/poster-card.jpg');
-}
-
-.artist-card:nth-child(2) .artist-card-image {
-  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
-}
-
-.artist-card:nth-child(3) .artist-card-image {
-  background-image: url('../assets/images/placeholders/sticker-card.jpg');
-}
-
-.artist-card:nth-child(4) .artist-card-image {
-  background-image: url('../assets/images/placeholders/apparel-card.jpg');
 }
 
 /* Hero banner background */
