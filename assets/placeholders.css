@@ -1,0 +1,224 @@
+/* Placeholder for product cards and images */
+
+/* Product Card Placeholders */
+.product-card-placeholder {
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add shimmer effect to placeholders */
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Specific product card placeholders */
+.product-card:nth-child(1) {
+  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(2) {
+  background-image: url('../assets/images/placeholders/phone-case-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(3) {
+  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(4) {
+  background-image: url('../assets/images/placeholders/hoodie-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(5) {
+  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(6) {
+  background-image: url('../assets/images/placeholders/poster-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(7) {
+  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(8) {
+  background-image: url('../assets/images/placeholders/gift-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.product-card:nth-child(9) {
+  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Featured product placeholders */
+.featured-product-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-product:nth-child(1) .featured-product-image {
+  background-image: url('../assets/images/placeholders/poster-card.jpg');
+}
+
+.featured-product:nth-child(2) .featured-product-image {
+  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+}
+
+.featured-product:nth-child(3) .featured-product-image {
+  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+}
+
+.featured-product:nth-child(4) .featured-product-image {
+  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+}
+
+.featured-product:nth-child(5) .featured-product-image {
+  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+}
+
+.featured-product:nth-child(6) .featured-product-image {
+  background-image: url('../assets/images/placeholders/hoodie-card.jpg');
+}
+
+.featured-product:nth-child(7) .featured-product-image {
+  background-image: url('../assets/images/placeholders/phone-case-card.jpg');
+}
+
+.featured-product:nth-child(8) .featured-product-image {
+  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+}
+
+.featured-product:nth-child(9) .featured-product-image {
+  background-image: url('../assets/images/placeholders/gift-card.jpg');
+}
+
+.featured-product:nth-child(10) .featured-product-image {
+  background-image: url('../assets/images/placeholders/poster-card.jpg');
+}
+
+/* Design card placeholders */
+.design-card-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.design-card:nth-child(1) .design-card-image {
+  background-image: url('../assets/images/placeholders/poster-card.jpg');
+}
+
+.design-card:nth-child(2) .design-card-image {
+  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+}
+
+.design-card:nth-child(3) .design-card-image {
+  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+}
+
+.design-card:nth-child(4) .design-card-image {
+  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+}
+
+.design-card:nth-child(5) .design-card-image {
+  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+}
+
+/* Fan art product placeholders */
+.fan-art-product-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.fan-art-product:nth-child(1) .fan-art-product-image {
+  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+}
+
+.fan-art-product:nth-child(2) .fan-art-product-image {
+  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+}
+
+.fan-art-product:nth-child(3) .fan-art-product-image {
+  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+}
+
+.fan-art-product:nth-child(4) .fan-art-product-image {
+  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+}
+
+.fan-art-product:nth-child(5) .fan-art-product-image {
+  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+}
+
+/* Artist card placeholders */
+.artist-card-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.artist-card:nth-child(1) .artist-card-image {
+  background-image: url('../assets/images/placeholders/poster-card.jpg');
+}
+
+.artist-card:nth-child(2) .artist-card-image {
+  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+}
+
+.artist-card:nth-child(3) .artist-card-image {
+  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+}
+
+.artist-card:nth-child(4) .artist-card-image {
+  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+}
+
+/* Hero banner background */
+.hero-banner {
+  background-image: url('../assets/images/placeholders/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Avatar placeholders */
+.avatar-img {
+  background-color: #f5f5f5;
+  background-image: url('../assets/images/logo-icon.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

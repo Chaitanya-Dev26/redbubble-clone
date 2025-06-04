@@ -1,0 +1,40 @@
+/* Redbubble Color Palette */
+:root {
+  /* Primary Colors */
+  --rb-red: #e41c34;
+  --rb-white: #ffffff;
+  --rb-black: #111111;
+  
+  /* Secondary Colors */
+  --rb-light-gray: #f5f5f5;
+  --rb-medium-gray: #e0e0e0;
+  --rb-dark-gray: #666666;
+  
+  /* Accent Colors */
+  --rb-blue: #4285f4;
+  --rb-pink: #ff69b4;
+  --rb-teal: #20c0b0;
+  
+  /* Background Colors */
+  --rb-bg-light: #f8f8f8;
+  --rb-bg-cream: #fff8e7;
+  
+  /* Button Colors */
+  --rb-button-primary: #e41c34;
+  --rb-button-hover: #c01528;
+  --rb-button-secondary: #ffffff;
+  
+  /* Text Colors */
+  --rb-text-primary: #111111;
+  --rb-text-secondary: #666666;
+  --rb-text-light: #999999;
+  
+  /* Border Colors */
+  --rb-border-light: #e0e0e0;
+  --rb-border-dark: #cccccc;
+  
+  /* Promotional Colors */
+  --rb-promo-blue: #e8f4ff;
+  --rb-promo-pink: #ffe8f4;
+  --rb-promo-yellow: #fff8e0;
+}
