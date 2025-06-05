@@ -574,22 +574,18 @@
 }
 
 .artist-avatar {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: -28px; /* pull it slightly upward over the image */
+  margin-bottom: 0.75rem;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--rb-white);
   background-color: var(--rb-light-gray);
-}
-
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-size: cover;
+  display: inline-block;
+  position: relative; /* make z-index work */
+  z-index: 2; /* bring in front */
 }
 
 .artist-name {

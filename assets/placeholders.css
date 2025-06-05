@@ -33,59 +33,59 @@ Placeholder for product cards and images
 }
 
 /* Specific product card placeholders */
-/* .product-card:nth-child(1) {
-  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
+ .product-card:nth-child(1) {
+  background-image: url('../assets/images/product-range/range_1.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(2) {
-  background-image: url('../assets/images/placeholders/phone-case-card.jpg');
+  background-image: url('../assets/images/product-range/range_2.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(3) {
-  background-image: url('../assets/images/placeholders/new-arrivals-card.jpg');
+  background-image: url('../assets/images/product-range/range_3.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(4) {
-  background-image: url('../assets/images/placeholders/hoodie-card.jpg');
+  background-image: url('../assets/images/product-range/range_4.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(5) {
-  background-image: url('../assets/images/placeholders/sticker-card.jpg');
+  background-image: url('../assets/images/product-range/range_5.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(6) {
-  background-image: url('../assets/images/placeholders/poster-card.jpg');
+  background-image: url('../assets/images/product-range/range_6.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(7) {
-  background-image: url('../assets/images/placeholders/apparel-card.jpg');
+  background-image: url('../assets/images/product-range/range_7.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(8) {
-  background-image: url('../assets/images/placeholders/gift-card.jpg');
+  background-image: url('../assets/images/product-range/range_8.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .product-card:nth-child(9) {
-  background-image: url('../assets/images/placeholders/home-living-card.jpg');
+  background-image: url('../assets/images/product-range/range_9.jpeg');
   background-size: cover;
   background-position: center;
-} */
+}
 
 /* Featured product placeholders */
  .featured-product-image {
@@ -180,6 +180,24 @@ Placeholder for product cards and images
 .artist-card:nth-child(4) .artist-card-image {
   background-image: url('../assets/images/artirts/johnnybuzt.jpg');
 }
+
+/* Artist avtar image */
+.artist-card:nth-child(1) .artist-avatar {
+  background-image: url('../assets/images/artirts/avatar/Perrin\ Le\ Feuvre.jpg');
+}
+
+.artist-card:nth-child(2) .artist-avatar {
+  background-image: url('../assets/images/artirts/avatar/Atomic-Charm.jpg');
+}
+
+.artist-card:nth-child(3) .artist-avatar {
+  background-image: url('../assets/images/artirts/avatar/crestfallenmermaid.jpg');
+}
+
+.artist-card:nth-child(4) .artist-avatar {
+  background-image: url('../assets/images/artirts/avatar/johnnybuzt.jpg');
+}
+
 
 /* Fan art product placeholders */
 .fan-art-product-image {
