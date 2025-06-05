@@ -16,6 +16,8 @@
   --rb-font-size-xl: 1.5rem;     /* 24px */
   --rb-font-size-2xl: 1.875rem;  /* 30px */
   --rb-font-size-3xl: 2.25rem;   /* 36px */
+  --rb-font-size-4xl: 3rem;      /* 48px */
+  --rb-font-size-56px: 3.5rem;  /* 56px */
   
   /* Font Weights */
   --rb-font-weight-light: 300;

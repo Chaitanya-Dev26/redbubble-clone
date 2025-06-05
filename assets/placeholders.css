@@ -225,13 +225,6 @@ Placeholder for product cards and images
   background-image: url('../assets/images/placeholders/tshirt-card.jpg');
 }
 
-/* Hero banner background */
-.hero-banner {
-  background-image: url('../assets/images/placeholders/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
 /* Avatar placeholders */
 .avatar-img {
   background-color: #f5f5f5;

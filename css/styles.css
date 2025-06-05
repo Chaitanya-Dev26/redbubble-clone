@@ -97,7 +97,7 @@
 .nav-link {
   margin-left: 1.5rem;
   font-family: var(--rb-font-primary);
-  font-size: var(--rb-font-size-sm);
+  font-size: var(--rb-font-size-base);
   font-weight: var(--rb-font-weight-medium);
   color: var(--rb-text-primary);
   transition: color 0.2s ease;
@@ -157,14 +157,12 @@
   text-align: center;
   position: relative;
   overflow: hidden; 
-  background-image: url('../assets/images/placeholders/hero-bg.jpg');
+  background-image: url('../assets/images/hero-banner.jpg');
   background-size: cover;
   background-position: center;
 }
 .hero-banner .container {
-  max-width: 1200px; /* Keep it centered and constrained */
-  padding: 0 2rem;    /* Horizontal space on left and right */
-  margin: 0 auto;
+  max-width: 1200px; 
 }
 
 .hero-content {
@@ -177,16 +175,16 @@
 
 .hero-title {
   font-family: var(--rb-font-primary);
-  font-size: var(--rb-font-size-3xl);
-  font-weight: var(--rb-font-weight-bold);
+  font-size: var(--rb-font-size-56px);
+  font-weight: var(--rb-font-weight-medium);
   color: var(--rb-text-primary);
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
   font-family: var(--rb-font-secondary);
-  font-size: var(--rb-font-size-lg);
-  font-weight: var(--rb-font-weight-regular);
+  font-size: var(--rb-font-size-xl);
+  font-weight: var(--rb-font-weight-semibold);
   color: var(--rb-text-primary);
   margin-bottom: 2rem;
   max-width: 600px;
@@ -260,8 +258,23 @@
   transition: transform 0.3s ease;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: inherit; 
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.product-card:hover::before {
+  transform: scale(1.1);
 }
 
 .product-card-content {
@@ -345,8 +358,12 @@
 }
 
 /* Featured Products Section */
-.featured-products {
-  padding: 2rem 0;
+.featured-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; /* Ensure equal height inside the grid */
+  overflow: hidden;
 }
 
 .featured-slider {
@@ -356,7 +373,7 @@
 
 .slider-arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background-color: var(--rb-white);
   border: 1px solid var(--rb-border-light);
@@ -395,9 +412,9 @@
   transition: transform 0.3s ease;
 }
 
-.featured-product:hover {
-  transform: translateY(-5px);
-}
+/* .featured-product:hover {
+  transform: translateY(-5px);         //hover effect
+} */
 
 .featured-product-link {
   display: block;
