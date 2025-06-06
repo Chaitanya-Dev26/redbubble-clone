@@ -688,34 +688,6 @@
   color: var(--rb-text-primary);
 }
 
-/* Promotional Banner */
-.promo-banner {
-  background-color: var(--rb-bg-cream);
-  padding: 3rem 0;
-  text-align: center;
-  position: relative;
-}
-
-.promo-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.promo-title {
-  font-family: var(--rb-font-primary);
-  font-size: var(--rb-font-size-2xl);
-  font-weight: var(--rb-font-weight-bold);
-  color: var(--rb-text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.promo-subtitle {
-  font-family: var(--rb-font-secondary);
-  font-size: var(--rb-font-size-lg);
-  color: var(--rb-text-primary);
-  margin-bottom: 1.5rem;
-}
-
 /* Trust Badges Section */
 .trust-badges {
   padding: 3rem 0;
@@ -791,6 +763,73 @@
 
 .trust-badge-link:hover {
   color: var(--rb-red);
+}
+
+/* Promotional Banner */
+.promo-banner {
+  background-color: var(--rb-bg-cream);
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.promo-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.promo-images {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.promo-image-left {
+  position: absolute;
+  left: -370px;
+  top: -15px;
+  width: 80px;
+  height: auto;
+}
+
+.promo-image-right {
+  position: absolute;
+  right: -370px;
+  bottom: -140px;
+  width: 100px;
+  height: auto;
+}
+
+.promo-title {
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-xl);
+  font-weight: var(--rb-font-weight-bold);
+  color: var(--rb-text-primary);
+}
+
+.promo-subtitle {
+  font-family: var(--rb-font-secondary);
+  font-size: var(--rb-font-size-lg);
+  font-weight: var(--rb-font-weight-bold);
+  color: var(--rb-text-primary);
+  margin-bottom: 1rem;
+}
+
+.Signup-button{
+  display: inline-block;
+  padding: 0.75rem 4rem;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(255, 89, 111);
+  color: var(--rb-white);
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-md);
+  font-weight: var(--rb-font-weight-semibold);
 }
 
 /* Footer */
