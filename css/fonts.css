@@ -1,0 +1,83 @@
+/* Redbubble Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  /* Font Families */
+  --rb-font-primary: 'Roboto', sans-serif;
+  --rb-font-secondary: 'Open Sans', sans-serif;
+  
+  /* Font Sizes */
+  --rb-font-size-xs: 0.75rem;    /* 12px */
+  --rb-font-size-sm: 0.875rem;   /* 14px */
+  --rb-font-size-base: 1rem;     /* 16px */
+  --rb-font-size-md: 1.125rem;   /* 18px */
+  --rb-font-size-lg: 1.25rem;    /* 20px */
+  --rb-font-size-xl: 1.5rem;     /* 24px */
+  --rb-font-size-2xl: 1.875rem;  /* 30px */
+  --rb-font-size-3xl: 2.25rem;   /* 36px */
+  --rb-font-size-4xl: 3rem;      /* 48px */
+  --rb-font-size-56px: 3.5rem;  /* 56px */
+  
+  /* Font Weights */
+  --rb-font-weight-light: 300;
+  --rb-font-weight-regular: 400;
+  --rb-font-weight-medium: 500;
+  --rb-font-weight-semibold: 600;
+  --rb-font-weight-bold: 700;
+  
+  /* Line Heights */
+  --rb-line-height-tight: 1.2;
+  --rb-line-height-normal: 1.5;
+  --rb-line-height-relaxed: 1.75;
+}
+
+/* Typography Classes */
+.rb-heading-1 {
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-3xl);
+  font-weight: var(--rb-font-weight-bold);
+  line-height: var(--rb-line-height-tight);
+}
+
+.rb-heading-2 {
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-2xl);
+  font-weight: var(--rb-font-weight-bold);
+  line-height: var(--rb-line-height-tight);
+}
+
+.rb-heading-3 {
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-xl);
+  font-weight: var(--rb-font-weight-medium);
+  line-height: var(--rb-line-height-tight);
+}
+
+.rb-body {
+  font-family: var(--rb-font-secondary);
+  font-size: var(--rb-font-size-base);
+  font-weight: var(--rb-font-weight-regular);
+  line-height: var(--rb-line-height-normal);
+}
+
+.rb-body-small {
+  font-family: var(--rb-font-secondary);
+  font-size: var(--rb-font-size-sm);
+  font-weight: var(--rb-font-weight-regular);
+  line-height: var(--rb-line-height-normal);
+}
+
+.rb-button-text {
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-sm);
+  font-weight: var(--rb-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rb-nav-link {
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-sm);
+  font-weight: var(--rb-font-weight-medium);
+}
