@@ -1,0 +1,465 @@
+/* Page Transitions */
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced fade in effect for main content */
+.auth-main {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Enhanced fade in effect for header */
+.auth-header {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Enhanced fade in effect for top nav */
+.auth-top-nav {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Enhanced fade in effect for search input */
+.auth-search {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Enhanced fade in effect for buttons */
+.auth-button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* Enhanced fade in effect for footer */
+.auth-footer {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+/* Enhanced fade in animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add a subtle overlay during loading */
+body:not(.loaded) {
+    position: relative;
+}
+
+body:not(.loaded)::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 9999;
+}
+
+/* Authentication Pages Styles */
+
+/* General Auth Layout */
+.auth-top-nav {
+    background-color: var(--rb-light-gray);
+    padding: 0.5rem 0;
+  }
+  
+  .auth-top-nav-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .auth-top-nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .auth-top-nav-link {
+    color: var(--rb-text-secondary);
+    text-decoration: none;
+    font-family: var(--rb-font-primary);
+    font-size: var(--rb-font-size-sm);
+    font-weight: var(--rb-font-weight-medium);
+  }
+  
+  .auth-top-nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-header {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rb-border-light);
+  }
+  
+  .auth-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .auth-logo img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .auth-logo img:hover {
+    transform: scale(1.05);
+  }
+  
+  .auth-search {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 2rem;
+    position: relative;
+  }
+  
+  .auth-search-form {
+    display: flex;
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--rb-border-light);
+    border-radius: 4px;
+    background-color: var(--rb-bg-light);
+  }
+  
+  .auth-search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--rb-font-secondary);
+    font-size: var(--rb-font-size-base);
+    color: var(--rb-text-primary);
+    background-color: transparent;
+  }
+  
+  .auth-search-input:focus {
+    outline: none;
+  }
+  
+  .auth-search-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--rb-text-secondary);
+    transition: color 0.2s ease;
+  }
+
+  .auth-search-button:hover {
+    color: var(--rb-red);
+  }
+  
+  .auth-cart-link {
+    color: var(--rb-text-secondary);
+    font-family: var(--rb-font-primary);
+    font-size: var(--rb-font-size-sm);
+    font-weight: var(--rb-font-weight-medium);
+    transition: color 0.2s ease;
+  }
+
+  .auth-cart-link:hover {
+    color: var(--rb-red);
+  }
+  
+  /* Main Auth Content */
+  .auth-main {
+    padding: 3rem 0;
+    min-height: calc(100vh - 300px);
+  }
+  
+  .auth-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .auth-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .auth-subtitle {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .auth-form {
+    text-align: left;
+  }
+  
+  .auth-form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .auth-input:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  .auth-form-forgot {
+    text-align: right;
+  }
+  
+  .auth-link {
+    color: #ff5678;
+    text-decoration: none;
+  }
+  
+  .auth-link:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-form-agreement {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  .auth-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--rb-red);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .auth-button:hover {
+    background-color: var(--rb-button-hover);
+  }
+  
+  .auth-form-recaptcha {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  .auth-form-login-link {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  
+  /* Signup Options */
+  .signup-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .signup-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .signup-option.active {
+    border-color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .signup-option-icon {
+    margin-bottom: 1rem;
+    color: #666;
+  }
+  
+  .signup-option-content {
+    text-align: center;
+  }
+  
+  .signup-option-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signup-option-description {
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  /* Checkbox */
+  .auth-form-checkbox {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .auth-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  
+  .auth-checkbox {
+    margin-right: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  
+  .auth-checkbox-text {
+    font-size: 0.875rem;
+    color: #333;
+  }
+  
+  /* Footer */
+  .auth-footer {
+    background-color: var(--rb-black);
+    color: #fff;
+    padding: 2rem 0;
+  }
+  
+  .auth-footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .auth-footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .auth-footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-footer-legal {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-footer-legal-link {
+    color: #aaa;
+    text-decoration: none;
+  }
+  
+  .auth-footer-legal-link:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .auth-footer-social-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .auth-header-content {
+      flex-wrap: wrap;
+    }
+    
+    .auth-logo {
+      order: 1;
+      margin-bottom: 1rem;
+    }
+    
+    .auth-search {
+      order: 3;
+      max-width: 100%;
+      margin: 1rem 0 0;
+    }
+    
+    .auth-cart {
+      order: 2;
+    }
+    
+    .signup-options {
+      flex-direction: column;
+    }
+    
+    .auth-footer-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .auth-top-nav-content {
+      justify-content: center;
+    }
+    
+    .auth-form-container {
+      padding: 0 1rem;
+    }
+    
+    .auth-title {
+      font-size: 1.5rem;
+    }
+  }
+  
