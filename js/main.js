@@ -73,7 +73,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Fan Art Tabs
     const tabButtons = document.querySelectorAll('.tab-button');
+    const fanArtProducts = document.querySelector('.fan-art-products');
     
+    // Initialize first tab
+    const activeTab = document.querySelector('.tab-button.active');
+    if (activeTab) {
+        updateFanArtProducts(activeTab.textContent);
+    }
+    
+    // Add click handlers for tab buttons
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Remove active class from all buttons
@@ -82,11 +90,210 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to clicked button
             this.classList.add('active');
             
-            // In a real implementation, this would load different products
-            // For this clone, we'll just show a message
-            console.log(`Tab clicked: ${this.textContent}`);
+            // Update fan art products based on category
+            updateFanArtProducts(this.textContent);
         });
     });
+    
+    // Function to update fan art products based on category
+    function updateFanArtProducts(category) {
+        // Get products for the selected category
+        const products = getProductsByCategory(category);
+        
+        // Add fade-out animation class to existing products
+        fanArtProducts.classList.add('fade-out');
+        
+        // Wait for fade-out animation to complete
+        setTimeout(() => {
+            // Clear existing products
+            fanArtProducts.innerHTML = '';
+            fanArtProducts.classList.remove('fade-out');
+            
+            // Add new products with fade-in animation
+            products.forEach(product => {
+                const productHtml = `
+                    <div class="fan-art-product fade-in">
+                        <a href="product-detail.html?id=${product.id}" class="fan-art-product-link" data-product-id="${product.id}">
+                            <div class="fan-art-product-image product-card-placeholder">
+                                <button class="heart-button" aria-label="Add to favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h3 class="fan-art-product-title">${product.title}</h3>
+                            <p class="fan-art-product-artist">by ${product.artist}</p>
+                            <p class="fan-art-product-price">$${product.price}</p>
+                        </a>
+                    </div>
+                `;
+                fanArtProducts.innerHTML += productHtml;
+            });
+        }, 200); // Wait for 300ms for fade-out animation
+    }
+    
+    // Function to get products by category
+    function getProductsByCategory(category) {
+        // For now, we'll return different products based on category
+        // In a real application, this would be based on product metadata
+        switch(category) {
+            case 'Star Trek':
+                return [
+                    {
+                        id: 11,
+                        title: "Enterprise Classic Graphic T-Shirt",
+                        artist: "JohnBealDesign",
+                        price: 36.34
+                    },
+                    {
+                        id: 12,
+                        title: "Trek Spaceship in Space - The Great Wave Classic T-Shirt",
+                        artist: "luciddreams",
+                        price: 27.14
+                    },
+                    {
+                        id: 13,
+                        title: "Space the final frontier Essential T-Shirt",
+                        artist: "LiRoVi",
+                        price: 26.15
+                    },
+                    {
+                        id: 14,
+                        title: "USS Enterprise Star Trek Classic T-Shirt",
+                        artist: "lighthouse-art",
+                        price: 24.85
+                    },
+                    {
+                        id: 15,
+                        title: "Beam Me Up, Scotty Essential T-Shirt",
+                        artist: "lighthouse-art",
+                        price: 27.14
+                    }
+                ];
+            case 'Schitt\'s Creek':
+                return [
+                    {
+                        id: 16,
+                        title: "Im sorry I didnt respond to like one text, David! Sticker",
+                        artist: " tiyashabhan",
+                        price: 1.69
+                    },
+                    {
+                        id: 17,
+                        title: "Schitts Creek Nom Nom Alexis Classic T-Shirt",
+                        artist: "Emily tong",
+                        price: 21.30
+                    },
+                    {
+                        id: 18,
+                        title: "Schitts Creek - Well, this town is very screamnastic - shitts",
+                        artist: "CyberYogi",
+                        price: 1.67
+                    },
+                ];
+            case 'Pan Am':
+                return [
+                    {
+                        id: 21,
+                        title: "Pan Am | Pan American Airways | Tail Fin Greeting Card",
+                        artist: "darryldesign",
+                        price: 12.87
+                    },
+                    {
+                        id: 22,
+                        title: "Pan Am Pan American World Airways Classic T-Shirt",
+                        artist: "fomodesigns",
+                        price: 26.10
+                    },
+                    {
+                        id: 23,
+                        title: "Pan American World Airways Pan Am Classic T-Shirt",
+                        artist: "fomodesigns",
+                        price: 22.19
+                    },
+                    {
+                        id: 24,
+                        title: "Pan American World Airways Boeing 707-320 Jet Age Tail (Left Facing) Coffee Mug",
+                        artist: "aspinworks",
+                        price: 15.22
+                    },
+                    {
+                        id: 25,
+                        title: "Caribbean Retro Vintage Travel Poster Poster",
+                        artist: "vintagevivian",
+                        price: 21.44
+                    }
+                ];
+            case 'Dune':
+                return [
+                    {
+                        id: 26,
+                        title: "Dune Universe Planets Glitch Logo Classic T-Shirt",
+                        artist: "FifthSun",
+                        price: 25.74
+                    },
+                    {
+                        id: 27,
+                        title: "Dune Universe Planets Emblem Classic T-Shirt",
+                        artist: "FifthSun",
+                        price: 25.74
+                    },
+                    {
+                        id: 28,
+                        title: "Dune House Atreides Distressed Badge Classic T-Shirt",
+                        artist: "FifthSun",
+                        price: 25.20
+                    },
+                    {
+                        id: 29,
+                        title: "Dune Fear Is The Mind Killer Lightweight Hoodie",
+                        artist: "FifthSun",
+                        price: 64.01
+                    },
+                    {
+                        id: 30,
+                        title: "Dune Rule Yourself First Quote Classic T-Shirt",
+                        artist: "FifthSun",
+                        price: 24.85
+                    }
+                ];
+            case 'Assassin\'s Creed':
+                return [
+                    {
+                        id: 31,
+                        title: "Assassin's Creed Cryptic Symbol Essential T-Shirt",
+                        artist: "Nerd Out!",
+                        price: 21.30
+                    },
+                    {
+                        id: 32,
+                        title: "Assassin's Creed Pattern Sticker",
+                        artist: "Fave101",
+                        price: 1.95
+                    },
+                    {
+                        id: 33,
+                        title: "Assassin's creed Sticker",
+                        artist: "urban-warriors",
+                        price: 1.53
+                    },
+                    {
+                        id: 34,
+                        title: "Eagle Bearer Warrior Essential T-Shirt",
+                        artist: "Hypertwenty Designs",
+                        price: 24.85
+                    },
+                    {
+                        id: 35,
+                        title: "Assassin's Creed - Stained Glass Series - 2 Graphic T-Shirt",
+                        artist: "HiddenRetro",
+                        price: 34.82
+                    }
+                ];
+            default:
+                return [];
+        }
+    }
     
     // Heart buttons for favorites
     const heartButtons = document.querySelectorAll('.heart-button');
@@ -122,36 +329,6 @@ document.addEventListener('DOMContentLoaded', function() {
             promoOverlay.classList.remove('active');
         });
     }
-    
-    // Add hover effects for product cards
-    const productCards = document.querySelectorAll('.product-card');
-    
-    productCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-            this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = 'none';
-        });
-    });
-    
-    // Add hover effects for featured products, design cards, and fan art products
-    const hoverItems = document.querySelectorAll('.featured-product, .design-card, .fan-art-product, .artist-card');
-    
-    hoverItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-            this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = 'none';
-        });
-    });
     
     // Add active state for search input
     const searchInput = document.querySelector('.search-input');

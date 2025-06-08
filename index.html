@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/placeholders.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -21,7 +21,7 @@
                 <!-- Logo -->
                 <div class="navbar-logo">
                     <a href="#" aria-label="Redbubble Home">
-                        <img src="assets/images/logo.svg" alt="Redbubble" width="150" height="40">
+                        <img src="assets/images/redbubble-seeklogo.png" alt="Redbubble" width="150" height="40">
                     </a>
                 </div>
                 
@@ -145,32 +145,32 @@
                     
                     <div class="featured-products-grid">
                         <!-- Row 1 -->
-                        <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                        <div class="featured-product" data-product-id="1">
+                            <a href="product-detail.html?id=1" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Holy Mackerel Print</h3>
                                 <p class="featured-product-artist">by Will Bullas Studio</p>
                                 <p class="featured-product-price">From $22.94</p>
                             </a>
                         </div>
-                        <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                        <div class="featured-product" data-product-id="2">
+                            <a href="product-detail.html?id=2" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Mondrian Style Laptop Sleeve</h3>
                                 <p class="featured-product-artist">by PlanetCatArt</p>
                                 <p class="featured-product-price">$44.92</p>
                             </a>
                         </div>
-                        <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                        <div class="featured-product" data-product-id="3">
+                            <a href="product-detail.html?id=3" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Hangry Fitted T-Shirt</h3>
                                 <p class="featured-product-artist">by chestify</p>
                                 <p class="featured-product-price">$39.77</p>
                             </a>
                         </div>
-                        <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                        <div class="featured-product" data-product-id="4">
+                            <a href="product-detail.html?id=4" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Save Your Soul Tote Bag</h3>
                                 <p class="featured-product-artist">by sachpica</p>
@@ -178,7 +178,7 @@
                             </a>
                         </div>
                         <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                            <a href="product-detail.html?id=5" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Ramona Spiral Notebook</h3>
                                 <p class="featured-product-artist">by ppmid</p>
@@ -188,7 +188,7 @@
                         
                         <!-- Row 2 -->
                         <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                            <a href="product-detail.html?id=6" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Unpuzzled Sticker</h3>
                                 <p class="featured-product-artist">by HenriqueTorres</p>
@@ -196,7 +196,7 @@
                             </a>
                         </div>
                         <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                            <a href="product-detail.html?id=7" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Enterprise Classic T-Shirt</h3>
                                 <p class="featured-product-artist">by JohnBealDesign</p>
@@ -204,7 +204,7 @@
                             </a>
                         </div>
                         <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                            <a href="product-detail.html?id=8" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">USS Enterprise Classic T-Shirt</h3>
                                 <p class="featured-product-artist">by lighthouse-art</p>
@@ -212,7 +212,7 @@
                             </a>
                         </div>
                         <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                            <a href="product-detail.html?id=9" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">To boldly go Throw Blanket</h3>
                                 <p class="featured-product-artist">by misticalplace</p>
@@ -220,7 +220,7 @@
                             </a>
                         </div>
                         <div class="featured-product">
-                            <a href="#" class="featured-product-link">
+                            <a href="product-detail.html?id=10" class="featured-product-link">
                                 <div class="featured-product-image product-card-placeholder"></div>
                                 <h3 class="featured-product-title">Gay/Queer Starfleet Pride Classic T-Shirt</h3>
                                 <p class="featured-product-artist">by EmceeFrodis</p>
@@ -389,21 +389,7 @@
                     </div>
                     <div class="fan-art-products">
                         <div class="fan-art-product">
-                            <a href="#" class="fan-art-product-link">
-                                <div class="fan-art-product-image product-card-placeholder">
-                                    <button class="heart-button" aria-label="Add to favorites">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <h3 class="fan-art-product-title">Beam Me Up, Scotty Essential T-Shirt</h3>
-                                <p class="fan-art-product-artist">by lighthouse-art</p>
-                                <p class="fan-art-product-price">From $23.07</p>
-                            </a>
-                        </div>
-                        <div class="fan-art-product">
-                            <a href="#" class="fan-art-product-link">
+                            <a href="product-detail.html?id=11" class="fan-art-product-link" data-product-id="6">
                                 <div class="fan-art-product-image product-card-placeholder">
                                     <button class="heart-button" aria-label="Add to favorites">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -417,7 +403,35 @@
                             </a>
                         </div>
                         <div class="fan-art-product">
-                            <a href="#" class="fan-art-product-link">
+                            <a href="product-detail.html?id=12" class="fan-art-product-link" data-product-id="7">
+                                <div class="fan-art-product-image product-card-placeholder">
+                                    <button class="heart-button" aria-label="Add to favorites">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="fan-art-product-title">Trek Spaceship in Space - The Great Wave Classic T-Shirt</h3>
+                                <p class="fan-art-product-artist">by luciddreams</p>
+                                <p class="fan-art-product-price">$27.14</p>
+                            </a>
+                        </div>
+                        <div class="fan-art-product">
+                            <a href="product-detail.html?id=13" class="fan-art-product-link" data-product-id="8">
+                                <div class="fan-art-product-image product-card-placeholder">
+                                    <button class="heart-button" aria-label="Add to favorites">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <h3 class="fan-art-product-title">Space the final frontier Essential T-Shirt</h3>
+                                <p class="fan-art-product-artist">by LiRoVi</p>
+                                <p class="fan-art-product-price">$26.15</p>
+                            </a>
+                        </div>
+                        <div class="fan-art-product">
+                            <a href="product-detail.html?id=14" class="fan-art-product-link" data-product-id="9">
                                 <div class="fan-art-product-image product-card-placeholder">
                                     <button class="heart-button" aria-label="Add to favorites">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -427,11 +441,11 @@
                                 </div>
                                 <h3 class="fan-art-product-title">USS Enterprise Star Trek Classic T-Shirt</h3>
                                 <p class="fan-art-product-artist">by lighthouse-art</p>
-                                <p class="fan-art-product-price">From $24.85</p>
+                                <p class="fan-art-product-price">$24.85</p>
                             </a>
                         </div>
                         <div class="fan-art-product">
-                            <a href="#" class="fan-art-product-link">
+                            <a href="product-detail.html?id=15" class="fan-art-product-link" data-product-id="10">
                                 <div class="fan-art-product-image product-card-placeholder">
                                     <button class="heart-button" aria-label="Add to favorites">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -439,23 +453,9 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <h3 class="fan-art-product-title">To boldly go Throw Blanket</h3>
-                                <p class="fan-art-product-artist">by misticalplace</p>
-                                <p class="fan-art-product-price">$56.03</p>
-                            </a>
-                        </div>
-                        <div class="fan-art-product">
-                            <a href="#" class="fan-art-product-link">
-                                <div class="fan-art-product-image product-card-placeholder">
-                                    <button class="heart-button" aria-label="Add to favorites">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <h3 class="fan-art-product-title">Gay/Queer Starfleet Pride Classic T-Shirt</h3>
-                                <p class="fan-art-product-artist">by EmceeFrodis</p>
-                                <p class="fan-art-product-price">From $23.07</p>
+                                <h3 class="fan-art-product-title">Beam Me Up, Scotty Essential T-Shirt</h3>
+                                <p class="fan-art-product-artist">by lighthouse-art</p>
+                                <p class="fan-art-product-price">$27.14</p>
                             </a>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>holy mackerel... Tote Bag | Redbubble</title>
+    <title>Product Detail | Redbubble</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -12,6 +12,64 @@
     <link rel="icon" href="assets/images/logo-icon.png" type="image/png">
 </head>
 <body>
+    <script src="js/products.js"></script>
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        
+        // Update product detail when page loads
+        if (productId) {
+            const product = getProductById(parseInt(productId));
+            if (product) {
+                // Update title
+                document.querySelector('.product-title').textContent = product.title;
+                
+                // Update artist info
+                document.querySelector('.creator-link').textContent = product.artist;
+                
+                // Update price
+                document.querySelector('.current-price').textContent = `$${product.price}`;
+                
+                // Update product image
+                const mainImage = document.querySelector('.product-main-image img');
+                if (mainImage) {
+                    mainImage.src = product.image;
+                    mainImage.alt = product.title;
+                }
+                
+                // Update thumbnails
+                const thumbnails = document.querySelectorAll('.thumbnail img');
+                thumbnails.forEach((img, index) => {
+                    img.src = product.image;
+                    img.alt = `${product.title} thumbnail ${index + 1}`;
+                });
+                
+                // Update product description
+                const featuresList = document.querySelector('.features-list');
+                if (featuresList) {
+                    featuresList.innerHTML = `
+                        <li>${product.description}</li>
+                        <li>Available in ${product.sizes.join(', ')}</li>
+                    `;
+                }
+                
+                // Update rating
+                const ratingScore = document.querySelector('.rating-score');
+                if (ratingScore) {
+                    ratingScore.textContent = `${product.rating} (${product.reviews} reviews)`;
+                }
+                
+                // Update size options
+                const sizeOptions = document.querySelector('.size-options');
+                if (sizeOptions) {
+                    sizeOptions.innerHTML = product.sizes.map(size => 
+                        `<button class="size-option">${size}</button>`
+                    ).join('');
+                }
+            }
+        }
+    </script>
     <!-- Header/Navigation -->
     <header class="header">
         <div class="container">
@@ -19,7 +77,7 @@
                 <!-- Logo -->
                 <div class="navbar-logo">
                     <a href="#" aria-label="Redbubble Home">
-                        <img src="assets/images/logo.svg" alt="Redbubble" width="150" height="40">
+                        <img src="assets/images/redbubble-seeklogo.png" alt="Redbubble" width="150" height="40">
                     </a>
                 </div>
                 
@@ -93,16 +151,16 @@
 
                 <!-- Product Info -->
                 <div class="product-info">
-                    <h1 class="product-title">holy mackerel... Tote Bag</h1>
+                    <h1 class="product-title"></h1>
                     
                     <div class="product-creator">
-                        <img src="assets/images/logo-icon.png" alt="Will Bullas Studio" class="creator-avatar">
-                        <span>Designed and sold by <a href="#" class="creator-link">Will Bullas Studio</a></span>
+                        <img src="" alt="" class="creator-avatar">
+                        <span>Designed and sold by <a href="#" class="creator-link"></a></span>
                     </div>
                     
                     <div class="product-price">
-                        <span class="current-price">$26.99</span>
-                        <span class="discount-price">$22.94 when you buy any 2+</span>
+                        <span class="current-price"></span>
+                        <span class="discount-price"></span>
                     </div>
                     
                     <div class="product-options">
