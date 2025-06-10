@@ -42,8 +42,8 @@
 
 .navbar-search {
   flex: 1 1 auto;
-  max-width: 500px;
   margin: 0 1rem;
+  max-width: 500px;
 }
 
 .search-form {
@@ -59,6 +59,7 @@
   border-radius: 50px;
   font-family: var(--rb-font-secondary);
   font-size: var(--rb-font-size-base);
+  background-color: #f5f5f5;
   transition: border-color 0.2s ease;
 }
 

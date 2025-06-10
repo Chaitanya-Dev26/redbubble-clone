@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/placeholders.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/main-page-transitions.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
@@ -39,16 +40,53 @@
                 
                 <!-- Navigation Links -->
                 <div class="navbar-links">
-                    <a href="#" class="nav-link">Sell your art</a>
-                    <a href="login.html" class="nav-link">Login</a>
-                    <a href="signup.html" class="nav-link">Signup</a>
-                    <a href="#" class="nav-link nav-icon" aria-label="Favorites">
-                        <img src="assets/images/heart-icon.svg" alt="Favorites" width="24" height="24">
-                    </a>
-                    <a href="#" class="nav-link nav-icon" aria-label="Cart">
-                        <img src="assets/images/cart-icon.svg" alt="Cart" width="24" height="24">
-                    </a>
+                    <!-- Navigation Links -->
+                    <div class="navbar-links">
+                        <!-- Logged out state -->
+                        <div class="navbar-logged-out">
+                            <a href="#" class="nav-link">Sell Your Art</a>
+                            <a href="login.html" class="nav-link">Login</a>
+                            <a href="signup.html" class="nav-link">Sign Up</a>
+                        </div>
+
+                     <!-- Logged in state -->
+                <div class="navbar-logged-in">
+                    <div class="profile-container">
+                        <div class="profile-icon" id="profile-icon">
+                            <div class="profile-icon-placeholder">
+                                <img src="assets/images/profile-icon.svg" alt="Profile">
+                            </div>
+                        </div>
+                        <div class="profile-dropdown" id="profile-dropdown">
+                            <div class="profile-dropdown-header">
+                                <div class="profile-dropdown-icon">
+                                    <img src="assets/images/profile-icon.svg" alt="Profile">
+                                </div>
+                                <div class="profile-dropdown-username" id="profile-username">username</div>
+                            </div>
+                            <div class="profile-dropdown-menu">
+                                <a href="#" class="profile-dropdown-item">Order History</a>
+                                <a href="#" class="profile-dropdown-item">BubbleMail</a>
+                                <a href="#" class="profile-dropdown-item">Account Settings</a>
+                                <a href="#" class="profile-dropdown-item">Manage Portfolio</a>
+                                <div class="profile-dropdown-sell">
+                                    <a href="#" class="profile-dropdown-sell-button">Sell Your Art</a>
+                                </div>
+                                <div class="profile-dropdown-divider"></div>
+                                <a href="#" class="profile-dropdown-item">RB Blog</a>
+                                <a href="#" class="profile-dropdown-item profile-dropdown-logout" id="logout-button">Logout</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <a href="#" class="nav-link nav-icon">
+                    <img src="assets/images/heart-icon.svg" alt="Favorites">
+                </a>
+                <a href="#" class="nav-link nav-icon">
+                    <img src="assets/images/cart-icon.svg" alt="Cart">
+                </a>
+            </div>
                 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -620,6 +658,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="js/profile.js" defer></script>
     <script src="js/main.js"></script>
 </body>
 </html>
