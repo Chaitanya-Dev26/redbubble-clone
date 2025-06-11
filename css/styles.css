@@ -151,6 +151,65 @@
   border-bottom: 15px solid  var(--rb-white);;
 }
 
+/* Section Navigation */
+.section-nav {
+  background-color: var(--rb-white);
+  border-bottom: 1px solid var(--rb-border-light);
+  position: sticky;
+  top: 75px;
+  z-index: 99;
+}
+
+.section-nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.section-nav-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.section-nav-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-family: var(--rb-font-primary);
+  font-size: var(--rb-font-size-base);
+  font-weight: var(--rb-font-weight-medium);
+  color: var(--rb-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.section-nav-link:hover {
+  color: var(--rb-red);
+}
+
+.section-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--rb-red);
+  transition: width 0.2s ease;
+}
+
+.section-nav-link:hover::after {
+  width: 100%;
+}
+
 /* Hero Banner */
 .hero-banner {
   background-color: #ffd1e0; 
@@ -984,6 +1043,20 @@
     flex-wrap: nowrap;
   }
   
+  .section-nav {
+    top: 60px;
+  }
+  
+  .section-nav-list {
+    justify-content: flex-start;
+    padding: 0 1rem;
+  }
+  
+  .section-nav-link {
+    padding: 0.75rem 1rem;
+    font-size: var(--rb-font-size-sm);
+  }
+  
   .navbar-search {
     order: 3;
     flex: 0 0 100%;
@@ -1105,4 +1178,64 @@
   .see-more-link {
     margin-top: 0.5rem;
   }
+}
+
+:root {
+  --rb-bg-dark: #181824;
+  --rb-bg-darker: #10101a;
+  --rb-dark-gray: #232336;
+  --rb-dark-text: #f5f5f5;
+  --rb-dark-secondary: #b0b0c3;
+}
+
+.dark-theme {
+  background: var(--rb-bg-dark);
+  color: var(--rb-dark-text);
+}
+.dark-theme body,
+.dark-theme .container,
+.dark-theme .extras-main {
+  background: var(--rb-bg-dark) !important;
+  color: var(--rb-dark-text) !important;
+}
+.dark-theme .header,
+.dark-theme .section-nav,
+.dark-theme .footer {
+  background: var(--rb-bg-darker) !important;
+  color: var(--rb-dark-text) !important;
+}
+.dark-theme .product-card,
+.dark-theme .featured-product-image,
+.dark-theme .design-card-image,
+.dark-theme .fan-art-product-image,
+.dark-theme .artist-card-image,
+.dark-theme .extras-main {
+  background: var(--rb-dark-gray) !important;
+}
+.dark-theme .section-title,
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+  color: var(--rb-dark-text) !important;
+}
+.dark-theme .nav-link,
+.dark-theme .nav-link:hover,
+.dark-theme .section-nav-link,
+.dark-theme .section-nav-link:hover {
+  color: var(--rb-dark-text) !important;
+}
+.dark-theme .btn-primary,
+.dark-theme .Signup-button {
+  background: var(--rb-red);
+  color: var(--rb-white);
+}
+.dark-theme .footer {
+  border-top: 1px solid #232336;
+}
+.dark-theme input,
+.dark-theme textarea {
+  background: #232336;
+  color: var(--rb-dark-text);
+  border: 1px solid #333;
+}
+.dark-theme .trust-badges-wrapper {
+  background: var(--rb-bg-darker);
 }
