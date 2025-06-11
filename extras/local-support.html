@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Support - Redbubble Clone</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+      .extras-main { max-width: 700px; margin: 3rem auto; background: var(--rb-white); border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 2.5rem 2rem; }
+      .extras-related { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rb-border-light); }
+      .extras-related ul { padding-left: 1rem; }
+      .extras-related a { color: var(--rb-red); text-decoration: underline; }
+      .extras-related a:hover { color: var(--rb-text-primary); }
+      .extras-form label { font-weight: 500; display: block; margin-bottom: 0.25rem; }
+      .extras-form input, .extras-form textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--rb-border-light); border-radius: 6px; margin-bottom: 1rem; font-size: 1rem; }
+      .extras-form button { padding: 0.75rem 2rem; border-radius: 50px; background: var(--rb-red); color: var(--rb-white); font-family: var(--rb-font-primary); font-size: 1rem; font-weight: 600; border: none; cursor: pointer; transition: background 0.2s; }
+      .extras-form button:hover { background: var(--rb-button-hover); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="navbar-logo" aria-label="Redbubble Home">
+                <img src="../assets/images/redbubble-seeklogo.png" alt="Redbubble" width="150" height="40">
+            </a>
+        </div>
+    </header>
+    <main class="extras-main">
+        <h1 class="section-title">Local Support</h1>
+        <p style="margin-bottom:2rem;">Our dedicated support team is available 24/7 to assist you with any questions or issues. Please use the form below and we'll get back to you as soon as possible.</p>
+        <form class="extras-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html> 
