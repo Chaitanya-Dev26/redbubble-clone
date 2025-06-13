@@ -1,6 +1,6 @@
 .clothing-banner {
     width: 85%;
-    height: 320px;
+    height: 220px;
     background-color: #3a79b7;
     display: flex;
     align-items: center;
@@ -119,6 +119,194 @@
     text-decoration: none;
     padding: 1rem;
 }
+  
+  /* Grey Background Container */
+  .grey-background-container {
+      background-color: var(--rb-bg-light);
+      padding: 3rem 0;
+  }
+  
+  /* T-shirt Info Section */
+  .tshirt-info-section {
+      padding: 3rem 0;
+  }
+  
+  .tshirt-info-wrapper {
+      background: white;
+      border-radius: 10px;
+      width: 1180px;
+      min-height: 250px;
+      border: 1px solid var(--rb-border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      margin: 0 auto;
+  }
+  
+  .tshirt-text-content {
+      flex: 1;
+      padding-right: 2rem;
+  }
+  
+  .tshirt-info-title {
+      font-family: var(--rb-font-primary);
+      font-size: var(--rb-font-size-2xl);
+      font-weight: var(--rb-font-weight-bold);
+      color: var(--rb-text-primary);
+      margin-bottom: 1rem;
+  }
+  
+  .tshirt-text-content ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+  }
+  
+  .tshirt-text-content ul li {
+      font-family: var(--rb-font-secondary);
+      font-size: var(--rb-font-size-base);
+      color: var(--rb-text-primary);
+      margin-bottom: 0.3rem;
+  }
+  
+  .shop-tshirts-link {
+      font-family: var(--rb-font-secondary);
+      font-size: var(--rb-font-size-base);
+      color: var(--rb-red);
+      text-decoration: none;
+      font-weight: var(--rb-font-weight-medium);
+  }
+  
+  .shop-tshirts-link i {
+      margin-left: 0.5rem;
+  }
+  
+  .tshirt-image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .tshirt-image {
+      max-width: 100%;
+      height: 250px;
+      border-radius: 8px;
+  }
+  
+  /* Responsive Design - Tablet */
+  /* Trust Badges Responsive Design */
+  @media (max-width: 1200px) {
+      .trust-badges-wrapper,
+      .tshirt-info-wrapper {
+          width: 90%;
+      }
+  }
+  
+  @media (max-width: 992px) {
+      .trust-badges-grid {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  
+      .tshirt-info-wrapper {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .tshirt-text-content {
+          padding-right: 0;
+          margin-bottom: 2rem;
+      }
+  
+      .tshirt-text-content ul {
+          text-align: left;
+          margin: 0 auto 1.5rem auto;
+          max-width: 80%;
+      }
+  }
+  
+  /* Responsive Design - Mobile */
+  @media (max-width: 768px) {
+      .trust-badges-grid {
+          grid-template-columns: 1fr;
+      }
+  
+      .trust-badge {
+          padding: 1rem;
+          flex-direction: row; /* Change to row for mobile layout */
+          text-align: left; /* Align text to left */
+          justify-content: flex-start; /* Align items to start */
+          border: 1px solid var(--rb-border-light); /* Add border for card separation */
+          border-radius: 8px; /* Rounded corners */
+          background-color: white; /* Light background */
+      }
+  
+      .trust-badge-icon {
+          margin-bottom: 0;
+          margin-right: 1rem; /* Space between icon and text */
+      }
+  
+      .trust-badge-content {
+          flex-grow: 1; /* Allow content to take available space */
+      }
+  
+      .trust-badge-title {
+          font-size: var(--rb-font-size-sm);
+          margin-bottom: 0.25rem;
+      }
+  
+      .trust-badge-text {
+          font-size: var(--rb-font-size-xs);
+          margin-bottom: 0;
+      }
+  
+      .trust-badge-link {
+          display: flex; /* Use flex to align arrow */
+          align-items: center;
+          margin-left: 1rem; /* Space between text and arrow */
+      }
+  
+      .trust-badge-link::after {
+          content: '\203A'; /* Right-facing arrow character */
+          font-size: 1.5rem;
+          margin-left: 0.5rem;
+      }
+  
+      .tshirt-info-title {
+          font-size: var(--rb-font-size-xl);
+      }
+  
+      .tshirt-text-content ul li {
+          font-size: var(--rb-font-size-sm);
+      }
+  
+      .shop-tshirts-link {
+          font-size: var(--rb-font-size-sm);
+      }
+  }
+  
+  /* Responsive Design - Mobile */
+  @media (max-width: 576px) {
+      .trust-badges-wrapper,
+      .tshirt-info-wrapper {
+          padding: 1rem;
+      }
+  
+      .trust-badges,
+      .tshirt-info-section {
+          padding: 1.5rem 0;
+      }
+  
+      .tshirt-info-title {
+          font-size: var(--rb-font-size-lg);
+      }
+  
+      .tshirt-text-content ul {
+          margin-left: 1rem;
+      }
+  }
+  
 
 /* Responsive Design - Tablet */
 @media (max-width: 1024px) {

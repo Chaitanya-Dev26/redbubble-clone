@@ -988,96 +988,148 @@
 }
 
 /* Responsive Design - Tablet */
+/* Product Grid Responsive Design */
 @media (max-width: 1024px) {
-  .product-grid {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .product-card {
+        height: 0;
+        padding-bottom: 100%;
+    }
+    
+    .product-card-content {
+        padding: 1rem;
+    }
+    
+    .new-tag {
+        top: 0.75rem;
+        right: 0.75rem;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .product-link {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    /* Trust Badges Responsive Design */
+    .trust-badges-wrapper,
+    .tshirt-info-wrapper {
+        width: 90%;
+    }
+    
+    .trust-badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .trust-badge {
+        padding: 1rem;
+    }
+    /* Footer Responsive Design */
+    .footer-grid {
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+    }
   }
-  
-  .product-card {
-      height: 0;
-      padding-bottom: 100%;
-  }
-  
-  .product-card-content {
-      padding: 1rem;
-  }
-  
-  .new-tag {
-      top: 0.75rem;
-      right: 0.75rem;
-      font-size: 0.8rem;
-      padding: 0.4rem 0.8rem;
-  }
-  
-  .product-link {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-  }
-}
 
 /* Responsive Design - Mobile */
+/* Product Grid Responsive Design */
 @media (max-width: 768px) {
-  .product-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-  }
-  
-  .product-card {
-      height: 0;
-      padding-bottom: 100%;
-      border-radius: 6px;
-  }
-  
-  .product-card::before {
-      background-size: cover;
-      background-position: center;
-  }
-  
-  .product-card-content {
-      padding: 0.75rem;
-  }
-  
-  .new-tag {
-      top: 0.5rem;
-      right: 0.5rem;
-      font-size: 0.7rem;
-      padding: 0.3rem 0.6rem;
-  }
-  
-  .product-link {
-      font-size: 0.8rem;
-      padding: 0.5rem 1rem;
-  }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .product-card {
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 6px;
+    }
+    
+    .product-card::before {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .product-card-content {
+        padding: 0.75rem;
+    }
+    
+    .new-tag {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .product-link {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
 /* Responsive Design - Small Mobile */
+/* Product Grid Responsive Design */
 @media (max-width: 480px) {
-  .product-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-  }
-  
-  .product-card {
-      height: 0;
-      padding-bottom: 100%;
-      border-radius: 4px;
-  }
-  
-  .product-card-content {
-      padding: 0.5rem;
-  }
-  
-  .new-tag {
-      top: 0.25rem;
-      right: 0.25rem;
-      font-size: 0.6rem;
-      padding: 0.2rem 0.4rem;
-  }
-  
-  .product-link {
-      font-size: 0.7rem;
-      padding: 0.4rem 0.8rem;
-  }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .product-card {
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 4px;
+    }
+    
+    .product-card-content {
+        padding: 0.5rem;
+    }
+    
+    .new-tag {
+        top: 0.25rem;
+        right: 0.25rem;
+        font-size: 0.6rem;
+        padding: 0.2rem 0.4rem;
+    }
+    
+    .product-link {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+    /* Footer Responsive Design */
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+    }
+    
+    .footer-logo {
+      margin-bottom: 1rem;
+    }
+    
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .region-selector {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+    
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .see-more-link {
+      margin-top: 0.5rem;
+    }
 }
 
