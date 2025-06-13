@@ -240,8 +240,8 @@ const products = [
         artist: "JohnBealDesign",
         price: 36.34,
         images: [
-            "assets/images/product_detail_images/star-wars-poster-1.jpg",
-            "assets/images/product_detail_images/star-wars-poster-2.jpg"
+            "assets/images/product_detail_images/hangry-fitted-1.jpg",
+            "assets/images/product_detail_images/hangry-fitted-2.jpg"
         ],
         description: "A beautiful poster featuring a Star Wars design, perfect for any fan.",
         sizes: ["S", "M", "L", "XL"],

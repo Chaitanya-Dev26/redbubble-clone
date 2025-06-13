@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 11,
                         title: "Enterprise Classic Graphic T-Shirt",
                         artist: "JohnBealDesign",
-                        price: 36.34
+                        price: 36.69
                     },
                     {
                         id: 12,
@@ -295,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+
     // Heart buttons for favorites
     const heartButtons = document.querySelectorAll('.heart-button');
     

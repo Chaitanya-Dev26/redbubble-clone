@@ -987,255 +987,97 @@
   font-size: var(--rb-font-size-sm);
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .featured-products-grid,
-  .explore-designs-grid,
-  .fan-art-products {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .featured-product:nth-child(n+9),
-  .design-card:nth-child(n+5),
-  .fan-art-product:nth-child(n+5) {
-    display: none;
-  }
-}
-
-@media (max-width: 992px) {
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
   }
   
-  .value-props-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
+  .product-card {
+      height: 0;
+      padding-bottom: 100%;
   }
   
-  .featured-products-grid,
-  .explore-designs-grid,
-  .fan-art-products {
-    grid-template-columns: repeat(3, 1fr);
+  .product-card-content {
+      padding: 1rem;
   }
   
-  .featured-product:nth-child(n+7),
-  .design-card:nth-child(n+4),
-  .fan-art-product:nth-child(n+4) {
-    display: none;
+  .new-tag {
+      top: 0.75rem;
+      right: 0.75rem;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
   }
   
-  .featured-artists-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .trust-badges-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 2rem;
-  }
-  
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .product-link {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
   }
 }
 
+/* Responsive Design - Mobile */
 @media (max-width: 768px) {
-  .navbar {
-    flex-wrap: nowrap;
-  }
-  
-  .section-nav {
-    top: 60px;
-  }
-  
-  .section-nav-list {
-    justify-content: flex-start;
-    padding: 0 1rem;
-  }
-  
-  .section-nav-link {
-    padding: 0.75rem 1rem;
-    font-size: var(--rb-font-size-sm);
-  }
-  
-  .navbar-search {
-    order: 3;
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin: 1rem 0 0;
-    display: none;
-  }
-  
-  .navbar-search.active {
-    display: block;
-  }
-  
-  .navbar-links {
-    display: none;
-  }
-  
-  .navbar-links.active {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--rb-white);
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-links.active .nav-link {
-    margin: 0.75rem 0;
-  }
-  
-  .mobile-menu-toggle {
-    display: flex;
-  }
-  
-  .hero-title {
-    font-size: var(--rb-font-size-2xl);
-  }
-  
-  .hero-subtitle {
-    font-size: var(--rb-font-size-base);
-  }
-  
-  .featured-products-grid,
-  .explore-designs-grid,
-  .fan-art-products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .featured-product:nth-child(n+5),
-  .design-card:nth-child(n+5),
-  .fan-art-product:nth-child(n+5) {
-    display: none;
-  }
-  
-  .tab-list {
-    padding-bottom: 0.5rem;
-  }
-  
-  .tab-button {
-    padding: 0.5rem 1rem;
-    font-size: var(--rb-font-size-sm);
-  }
-}
-
-@media (max-width: 576px) {
   .product-grid {
-    grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
   }
   
-  .value-props-grid {
-    grid-template-columns: 1fr;
+  .product-card {
+      height: 0;
+      padding-bottom: 100%;
+      border-radius: 6px;
   }
   
-  .featured-products-grid,
-  .explore-designs-grid,
-  .fan-art-products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+  .product-card::before {
+      background-size: cover;
+      background-position: center;
   }
   
-  .featured-artists-grid {
-    grid-template-columns: 1fr;
+  .product-card-content {
+      padding: 0.75rem;
   }
   
-  .trust-badges-grid {
-    grid-template-columns: 1fr;
+  .new-tag {
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.6rem;
   }
   
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-  }
-  
-  .footer-logo {
-    margin-bottom: 1rem;
-  }
-  
-  .footer-info {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .region-selector {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .see-more-link {
-    margin-top: 0.5rem;
+  .product-link {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
   }
 }
 
-:root {
-  --rb-bg-dark: #181824;
-  --rb-bg-darker: #10101a;
-  --rb-dark-gray: #232336;
-  --rb-dark-text: #f5f5f5;
-  --rb-dark-secondary: #b0b0c3;
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+  .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+  }
+  
+  .product-card {
+      height: 0;
+      padding-bottom: 100%;
+      border-radius: 4px;
+  }
+  
+  .product-card-content {
+      padding: 0.5rem;
+  }
+  
+  .new-tag {
+      top: 0.25rem;
+      right: 0.25rem;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.4rem;
+  }
+  
+  .product-link {
+      font-size: 0.7rem;
+      padding: 0.4rem 0.8rem;
+  }
 }
 
-.dark-theme {
-  background: var(--rb-bg-dark);
-  color: var(--rb-dark-text);
-}
-.dark-theme body,
-.dark-theme .container,
-.dark-theme .extras-main {
-  background: var(--rb-bg-dark) !important;
-  color: var(--rb-dark-text) !important;
-}
-.dark-theme .header,
-.dark-theme .section-nav,
-.dark-theme .footer {
-  background: var(--rb-bg-darker) !important;
-  color: var(--rb-dark-text) !important;
-}
-.dark-theme .product-card,
-.dark-theme .featured-product-image,
-.dark-theme .design-card-image,
-.dark-theme .fan-art-product-image,
-.dark-theme .artist-card-image,
-.dark-theme .extras-main {
-  background: var(--rb-dark-gray) !important;
-}
-.dark-theme .section-title,
-.dark-theme h1, .dark-theme h2, .dark-theme h3 {
-  color: var(--rb-dark-text) !important;
-}
-.dark-theme .nav-link,
-.dark-theme .nav-link:hover,
-.dark-theme .section-nav-link,
-.dark-theme .section-nav-link:hover {
-  color: var(--rb-dark-text) !important;
-}
-.dark-theme .btn-primary,
-.dark-theme .Signup-button {
-  background: var(--rb-red);
-  color: var(--rb-white);
-}
-.dark-theme .footer {
-  border-top: 1px solid #232336;
-}
-.dark-theme input,
-.dark-theme textarea {
-  background: #232336;
-  color: var(--rb-dark-text);
-  border: 1px solid #333;
-}
-.dark-theme .trust-badges-wrapper {
-  background: var(--rb-bg-darker);
-}

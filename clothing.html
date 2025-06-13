@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Apparel | Redbubble</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/placeholders.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/clothing.css">
+    <link rel="stylesheet" href="css/main-page-transitions.css">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKB4Imkb9hFQ5b1U6U5zTh+V/uGNzcRCjSc5vNmiY6L0H944kaW1YHlzTH0PzZMfj5ur2jcWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/page-transitions.js" defer></script>
+</head>
+<body>
+       <!-- Header/Navigation -->
+       <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <div class="navbar-logo">
+                    <a href="index.html" aria-label="Redbubble Home">
+                        <img src="assets/images/redbubble-seeklogo.png" alt="Redbubble" width="150" height="40">
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="navbar-search">
+                    <form class="search-form" action="#" method="get">
+                        <input type="text" placeholder="Search designs and products" class="search-input">
+                        <button type="submit" class="search-button" aria-label="Search">
+                            <img src="assets/images/search-icon.svg" alt="Search" width="20" height="20">
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="navbar-links">
+                    <!-- Navigation Links -->
+                    <div class="navbar-links">
+                        <!-- Logged out state -->
+                        <div class="navbar-logged-out">
+                            <a href="#" class="nav-link">Sell Your Art</a>
+                            <a href="login.html" class="nav-link">Login</a>
+                            <a href="signup.html" class="nav-link">Sign Up</a>
+                        </div>
+
+                <!-- Logged in state -->
+                <div class="navbar-logged-in">
+                    <div class="profile-container">
+                        <div class="profile-icon" id="profile-icon">
+                            <div class="profile-icon-placeholder">
+                                <img src="assets/images/profile-icon.svg" alt="Profile">
+                            </div>
+                        </div>
+                        <div class="profile-dropdown" id="profile-dropdown">
+                            <div class="profile-dropdown-header">
+                                <div class="profile-dropdown-icon">
+                                    <img src="assets/images/profile-icon.svg" alt="Profile">
+                                </div>
+                                <div class="profile-dropdown-username" id="profile-username">username</div>
+                            </div>
+                            <div class="profile-dropdown-menu">
+                                <a href="#" class="profile-dropdown-item">Order History</a>
+                                <a href="#" class="profile-dropdown-item">BubbleMail</a>
+                                <a href="#" class="profile-dropdown-item">Account Settings</a>
+                                <a href="#" class="profile-dropdown-item">Manage Portfolio</a>
+                                <div class="profile-dropdown-sell">
+                                    <a href="#" class="profile-dropdown-sell-button">Sell Your Art</a>
+                                </div>
+                                <div class="profile-dropdown-divider"></div>
+                                <a href="#" class="profile-dropdown-item">RB Blog</a>
+                                <a href="#" class="profile-dropdown-item profile-dropdown-logout" id="logout-button">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="nav-link nav-icon">
+                    <img src="assets/images/heart-icon.svg" alt="Favorites">
+                </a>
+                <a href="#" class="nav-link nav-icon">
+                    <img src="assets/images/cart-icon.svg" alt="Cart">
+                </a>
+            </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="top-banner"></section>
+
+    <section class="clothing-banner">
+        <div class="container">
+            <div class="clothing-content">
+                <h1 class="clothing-title">Clothing</h1>
+                <p class="clothing-subtitle">Refresh your closet with new hoodies, t-shirts, hats, and dresses. Designed with love by artists.</p>
+                <a href="#" class="clothing-button">Shop Clothing <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Product Range Section -->
+    <section id="clothing-range" class="clothing-range">
+        <div class="container">
+            <div class="clothing-grid">
+                <!-- Row 1 -->
+                <div class="clothing-item">
+                    <div class="clothing-card hoodies-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Boxy T-shirts</h3>
+                </div>
+                
+                <div class="clothing-item">
+                    <div class="clothing-card tshirts-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Oversized T-Shirts</h3>
+                </div>
+                
+                <div class="clothing-item">
+                    <div class="clothing-card hats-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Womens Clothing</h3>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="clothing-item">
+                    <div class="clothing-card dresses-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Mens Clothing</h3>
+                </div>
+                
+                <div class="clothing-item">
+                    <div class="clothing-card accessories-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Shop Accessories</h3>
+                </div>
+                
+                <div class="clothing-item">
+                    <div class="clothing-card new-arrivals-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Shop New Arrivals</h3>
+                </div>
+                
+                <div class="clothing-item">
+                    <div class="clothing-card new-arrivals-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Shop New Arrivals</h3>
+                </div>
+                
+                <div class="clothing-item">
+                    <div class="clothing-card new-arrivals-card" style="background-image: url('../assets/images/clothing/boxy-tshirt.png')"></div>
+                    <h3 class="clothing-link">Shop New Arrivals</h3>
+                </div>
+            </div>
+        </div>
+    </section>                
+
+    <!-- Trust Badges Section -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="trust-badges-wrapper">
+                <div class="trust-badges-grid">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">
+                        <img src="../assets/images/trust-badges/global-shipping.png" alt="Atomic Charm Logo" width="65" height="65">
+                    </div>
+                    <h3 class="trust-badge-title">Worldwide Shipping</h3>
+                    <p class="trust-badge-text">Available as Standard or Express delivery</p>
+                    <a href="/extras/shipping.html" class="trust-badge-link" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">
+                        <img src="../assets/images/trust-badges/secure-payment.png" alt="Atomic Charm Logo" width="65" height="65">
+                    </div>
+                    <h3 class="trust-badge-title">Secure Payments</h3>
+                    <p class="trust-badge-text">100% Secure payment with 256-bit SSL Encryption</p>
+                    <a href="/extras/secure-payments.html" class="trust-badge-link" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">
+                        <img src="../assets/images/trust-badges/return.png" alt="Atomic Charm Logo" width="65" height="65">
+                    </div>
+                    <h3 class="trust-badge-title">Free Return</h3>
+                    <p class="trust-badge-text">Exchange or money back guarantee for all orders</p>
+                    <a href="/extras/free-return.html" class="trust-badge-link" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">
+                        <img src="../assets/images/trust-badges/customer-service.png" alt="Atomic Charm Logo" width="65" height="65">
+                    </div>
+                    <h3 class="trust-badge-title">Local Support</h3>
+                    <p class="trust-badge-text">24/7 Dedicated support</p>
+                    <a href="/extras/local-support.html" class="trust-badge-link" rel="noopener noreferrer">Submit a request</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Gift Guides</a></li>
+                        <li><a href="#">Fan Art</a></li>
+                        <li><a href="#">New Works</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Student Discount</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Signup</a></li>
+                        <li><a href="#">Bulk orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Social Responsibility</a></li>
+                        <li><a href="#">Investor Center</a></li>
+                        <li><a href="#">Partner Program</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Sell your art</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Artist Blog</a></li>
+                        <li><a href="#">Create a Dashery store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Product Safety</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Social</h3>
+                    <ul class="footer-social-links">
+                        <li><a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                            </svg>
+                            Instagram
+                        </a></li>
+                        <li><a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" fill="currentColor"/>
+                            </svg>
+                            Facebook
+                        </a></li>
+                        <li><a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" fill="currentColor"/>
+                            </svg>
+                            Twitter
+                        </a></li>
+                        <li><a href="#" aria-label="Tumblr">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M19.512 17.489l-.096-.068h-3.274c-.153 0-.16-.467-.163-.622v-5.714c0-.056.045-.101.101-.101h3.82c.056 0 .101-.045.101-.101v-3.766c0-.056-.045-.101-.101-.101h-3.803c-.056 0-.101-.045-.101-.101v-4.816c0-.056-.045-.101-.101-.101h-3.773c-.056 0-.101.045-.101.101 0 0-.165 2.75-.468 5.145-.344 2.692-1.104 4.064-2.679 5.931-1.071 1.272-1.874 1.53-2.426 1.53-.056 0-.101.045-.101.101v3.708c0 .056.045.101.101.101h3.809c.056 0 .101.045.101.101v6.081c0 3.496 2.358 5.125 5.351 5.125 2.316 0 4.064-1.12 4.94-1.674l.979-.595c.036-.022.057-.061.057-.103v-3.496c0-.034-.015-.065-.039-.086z" fill="currentColor"/>
+                            </svg>
+                            Tumblr
+                        </a></li>
+                        <li><a href="#" aria-label="Pinterest">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" fill="currentColor"/>
+                            </svg>
+                            Pinterest
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="assets/images/favicon.svg" alt="Redbubble" width="120" height="30">
+                </div>
+                <div class="footer-info">
+                    <div class="region-selector">
+                        <span class="region-flag">🇺🇸</span>
+                        <span class="region-text">USD$ - English</span>
+                    </div>
+                    <div class="content-settings">
+                        <span>Mature content: Hidden</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/profile.js" defer></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

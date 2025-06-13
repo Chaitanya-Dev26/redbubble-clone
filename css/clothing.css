@@ -1,0 +1,247 @@
+.clothing-banner {
+    width: 85%;
+    height: 320px;
+    background-color: #3a79b7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem auto 0;
+    border-radius: 10px;
+}
+
+.clothing-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.clothing-title {
+    font-family: var(--rb-font-primary);
+    font-size: var(--rb-font-size-2xl);
+    font-weight: var(--rb-font-weight-bold);
+    line-height: var(--rb-line-height-relaxed);
+    margin-bottom: 1rem;
+    color: var(--rb-white);
+}
+
+.clothing-subtitle {
+    font-family: var(--rb-font-secondary);
+    font-size: var(--rb-font-size-md);
+    line-height: var(--rb-line-height-normal);
+    margin-bottom: 1rem;
+    color: var(--rb-white);
+}
+
+.clothing-button {
+    display: inline-block;
+    padding: 0.20rem 0.5rem;
+    border-radius: 50px;
+    color: var(--rb-white);
+    text-decoration: none;
+    font-family: var(--rb-font-primary);
+    font-weight: var(--rb-font-weight-medium);
+    transition: background-color 0.3s ease;
+}
+
+.clothing-button:hover {
+    background-color: var(--rb-red);
+}
+
+/* Product Range Section */
+.clothing-range {
+    padding: 3rem 0;
+}
+
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.clothing-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.clothing-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clothing-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px; /* Increased height */
+    width: 100%;
+    background-color: var(--rb-light-gray);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.clothing-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: inherit; 
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.clothing-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.05rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.clothing-link {
+    font-family: var(--rb-font-primary);
+    font-size: var(--rb-font-size-base);
+    font-weight: var(--rb-font-weight-medium);
+    color: var(--rb-text-primary);
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+    .clothing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .clothing-card {
+        height: 350px;
+    }
+    
+    .clothing-banner {
+        width: 90%;
+        height: 280px;
+        padding: 1.5rem;
+    }
+    
+    .clothing-range {
+        padding: 2rem 0;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .clothing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .clothing-card {
+        height: 280px;
+        border-radius: 6px;
+    }
+    
+    .clothing-card::before {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .clothing-link {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+    
+    .clothing-banner {
+        width: 95%;
+        height: 240px;
+        padding: 1rem;
+        margin: 1rem auto 0;
+    }
+    
+    .clothing-content {
+        max-width: 100%;
+    }
+    
+    .clothing-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .clothing-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .clothing-button {
+        padding: 0.15rem 0.4rem;
+        font-size: 0.85rem;
+    }
+    
+    .clothing-range {
+        padding: 2rem 0;
+    }
+    
+    .clothing-item:hover {
+        transform: translateY(-4px) scale(1.01);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+    .clothing-grid {
+        gap: 0.75rem;
+        padding: 0 0.5rem;
+    }
+    
+    .clothing-card {
+        height: 240px;
+        border-radius: 4px;
+    }
+    
+    .clothing-link {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+    
+    .clothing-banner {
+        width: 98%;
+        height: 200px;
+        padding: 0.75rem;
+        border-radius: 6px;
+    }
+    
+    .clothing-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .clothing-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .clothing-button {
+        padding: 0.1rem 0.3rem;
+        font-size: 0.75rem;
+    }
+    
+    .clothing-range {
+        padding: 1.5rem 0;
+    }
+}
+

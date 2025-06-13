@@ -87,6 +87,19 @@ Placeholder for product cards and images
   background-position: center;
 }
 
+/* Fan art product styling */
+.fan-art-product-image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+    object-fit: contain;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Featured product placeholders */
  .featured-product-image {
   background-size: cover;
@@ -197,34 +210,6 @@ Placeholder for product cards and images
 .artist-card:nth-child(4) .artist-avatar {
   background-image: url('../assets/images/artirts/avatar/johnnybuzt.jpg');
 }
-
-
-/* Fan art product placeholders */
-.fan-art-product-image {
-  background-size: cover;
-  background-position: center;
-}
-
-.fan-art-product:nth-child(1) .fan-art-product-image {
-  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
-}
-
-.fan-art-product:nth-child(2) .fan-art-product-image {
-  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
-}
-
-.fan-art-product:nth-child(3) .fan-art-product-image {
-  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
-}
-
-.fan-art-product:nth-child(4) .fan-art-product-image {
-  background-image: url('../assets/images/placeholders/home-living-card.jpg');
-}
-
-.fan-art-product:nth-child(5) .fan-art-product-image {
-  background-image: url('../assets/images/placeholders/tshirt-card.jpg');
-}
-
 
 /* Avatar placeholders */
 .avatar-img {
