@@ -503,8 +503,33 @@
 
 .explore-designs-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+/* Hide scrollbar and enable scrolling */
+.explore-designs-grid.horizontal-scroll {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.explore-designs-grid.horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.explore-designs-grid.horizontal-scroll .design-card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  min-width: 235px;
+  max-width: 235px;
 }
 
 .design-card {
@@ -1015,6 +1040,16 @@
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
     }
+
+    .explore-designs-grid.horizontal-scroll .design-card {
+      min-width: calc(33.33% - 0.66rem); /* Approximately 3 cards with 1rem gap */
+      max-width: calc(33.33% - 0.66rem);
+    }
+
+    .section-header h2 {
+      font-size: 1.8rem;
+    }
+
     /* Trust Badges Responsive Design */
     .trust-badges-wrapper,
     .tshirt-info-wrapper {
@@ -1069,6 +1104,15 @@
         font-size: 0.8rem;
         padding: 0.5rem 1rem;
     }
+
+    .explore-designs-grid.horizontal-scroll .design-card {
+      min-width: calc(50% - 0.5rem);
+      max-width: calc(50% - 0.5rem);
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+    }
 }
 
 /* Responsive Design - Small Mobile */
@@ -1099,6 +1143,14 @@
     .product-link {
         font-size: 0.7rem;
         padding: 0.4rem 0.8rem;
+    }
+    .explore-designs-grid.horizontal-scroll .design-card {
+      min-width: calc(50% - 0.5rem);
+      max-width: calc(50% - 0.5rem);
+    }
+    
+    .section-header h2 {
+      font-size: 1.2rem;
     }
     /* Footer Responsive Design */
     .footer-grid {

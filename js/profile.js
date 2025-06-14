@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Clear login state
             localStorage.removeItem('isLoggedIn');
-            localStorage.removeItem('username');
+            localStorage.removeItem('username')
             
             // Update UI
             updateLoginState(false);
