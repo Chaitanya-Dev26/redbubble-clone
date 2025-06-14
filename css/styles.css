@@ -1015,6 +1015,9 @@
 /* Responsive Design - Tablet */
 /* Product Grid Responsive Design */
 @media (max-width: 1024px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
@@ -1073,6 +1076,9 @@
 /* Responsive Design - Mobile */
 /* Product Grid Responsive Design */
 @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -1118,6 +1124,9 @@
 /* Responsive Design - Small Mobile */
 /* Product Grid Responsive Design */
 @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.2rem;
+    }
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.75rem;
@@ -1148,7 +1157,7 @@
       min-width: calc(50% - 0.5rem);
       max-width: calc(50% - 0.5rem);
     }
-    
+
     .section-header h2 {
       font-size: 1.2rem;
     }
