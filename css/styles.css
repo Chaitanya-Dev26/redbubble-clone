@@ -1,9 +1,9 @@
 /* Main Styles for Redbubble Clone */
 
 /* Import base styles */
-@import url('../assets/colors.css');
-@import url('../assets/fonts.css');
-@import url('../assets/placeholders.css');
+@import url('colors.css');
+@import url('fonts.css');
+@import url('placeholders.css');
 
 /* Global container styles */
 .container {
@@ -486,7 +486,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .see-more-link {
@@ -609,9 +609,113 @@
 }
 
 .featured-artists-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 1.5rem;
+  padding: 1.5rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  touch-action: pan-x;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.featured-artists-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.artist-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-out;
+  background: var(--rb-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop (default) - 4 cards */
+@media (min-width: 1024px) {
+  .artist-card {
+    min-width: calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+  }
+}
+
+/* Tablet - 3 cards */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .artist-card {
+    min-width: calc(33.33% - 1rem);
+    max-width: calc(33.33% - 1rem);
+  }
+}
+
+/* Mobile - 2 cards */
+@media (max-width: 767px) {
+  .artist-card {
+    min-width: calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+}
+
+.artist-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.artist-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.75rem;
+}
+
+.artist-card-image {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.artist-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--rb-gray-light);
+  margin-bottom: 0.75rem;
+}
+
+.artist-name {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: var(--rb-text-primary);
+}
+
+.view-shop-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: var(--rb-primary);
+  color: var(--rb-white);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.view-shop-button:hover {
+  background: var(--rb-primary-dark);
 }
 
 .artist-card {
@@ -1053,6 +1157,50 @@
       font-size: 1.8rem;
     }
 
+    .featured-products-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+      touch-action: pan-x;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  
+    .featured-products-grid::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+  
+    .featured-product {
+      flex: 0 0 auto;
+      min-width: calc(20% - 1rem); /* 5 cards with 1rem gap */
+      max-width: calc(20% - 1rem);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease-out;
+    }
+    
+    .featured-product::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+    
+    .slider-arrow {
+      display: none;
+    }
+    
+    .featured-slider {
+      padding: 0 1rem; /* Adjust padding for mobile */
+      -webkit-overflow-scrolling: touch;
+    }
     /* Trust Badges Responsive Design */
     .trust-badges-wrapper,
     .tshirt-info-wrapper {
@@ -1111,6 +1259,34 @@
         padding: 0.5rem 1rem;
     }
 
+    .featured-products-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+    }
+  
+    .featured-products-grid::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+  
+    .featured-product {
+      flex: 0 0 auto;
+      min-width: calc(50% - 0.75rem); /* Two cards with 1.5rem gap */
+      max-width: calc(50% - 0.75rem);
+      scroll-snap-align: start;
+    }
+  
+    .slider-arrow {
+      display: none;
+    }
+  
+    .featured-slider {
+      padding: 0 1rem; /* Adjust padding for mobile */
+    }
     .explore-designs-grid.horizontal-scroll .design-card {
       min-width: calc(50% - 0.5rem);
       max-width: calc(50% - 0.5rem);
@@ -1152,6 +1328,34 @@
     .product-link {
         font-size: 0.7rem;
         padding: 0.4rem 0.8rem;
+    }
+    .featured-products-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+    }
+  
+    .featured-products-grid::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+  
+    .featured-product {
+      flex: 0 0 auto;
+      min-width: calc(50% - 0.75rem); /* Two cards with 1.5rem gap */
+      max-width: calc(50% - 0.75rem);
+      scroll-snap-align: start;
+    }
+  
+    .slider-arrow {
+      display: none;
+    }
+  
+    .featured-slider {
+      padding: 0 1rem; /* Adjust padding for mobile */
     }
     .explore-designs-grid.horizontal-scroll .design-card {
       min-width: calc(50% - 0.5rem);

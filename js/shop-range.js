@@ -18,12 +18,6 @@ const bannerData = {
         buttonText: "Shop Hoodies",
         color: "#5a90e2"
     },
-    phonecases: {
-        title: "Phone Cases",
-        subtitle: "Protect your phone with unique phone cases from independent artists",
-        buttonText: "Shop Phone Cases",
-        color: "#8a90e2"
-    },
     newarrivals: {
         title: "New Arrivals",
         subtitle: "Discover our latest arrivals from independent artists",

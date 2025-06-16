@@ -17,58 +17,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Featured Products Slider
+    // Featured Products Slider with Smooth Scrolling
     const sliderPrev = document.querySelector('.slider-prev');
     const sliderNext = document.querySelector('.slider-next');
     const featuredProductsGrid = document.querySelector('.featured-products-grid');
-    let currentSlide = 0;
+    const products = document.querySelectorAll('.featured-product');
     
-    // Calculate how many products to show based on screen width
-    function getProductsPerView() {
-        if (window.innerWidth >= 1200) return 5;
-        if (window.innerWidth >= 992) return 4;
-        if (window.innerWidth >= 768) return 3;
-        return 2;
-    }
-    
-    function updateSlider() {
-        const productsPerView = getProductsPerView();
-        const featuredProducts = document.querySelectorAll('.featured-product');
-        const totalSlides = Math.ceil(featuredProducts.length / productsPerView);
+    let currentScroll = 0;
+    const productsToShow = 5;
+    const productWidth = products.length > 0 ? products[0].offsetWidth + 16 : 216; // Default width: 200px + 16px gap
+
+    function scrollProducts(direction) {
+        const totalScroll = productWidth * productsToShow;
         
-        // Ensure currentSlide is within bounds
-        if (currentSlide < 0) currentSlide = 0;
-        if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
-        
-        // Show/hide products based on current slide
-        featuredProducts.forEach((product, index) => {
-            const startIndex = currentSlide * productsPerView;
-            const endIndex = startIndex + productsPerView;
-            
-            if (index >= startIndex && index < endIndex) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
+        if (direction === 'next') {
+            if (currentScroll + totalScroll < featuredProductsGrid.scrollWidth - featuredProductsGrid.clientWidth) {
+                currentScroll += totalScroll;
+                featuredProductsGrid.scrollTo({
+                    left: currentScroll,
+                    behavior: 'smooth'
+                });
             }
-        });
+        } else if (direction === 'prev') {
+            if (currentScroll > 0) {
+                currentScroll = Math.max(0, currentScroll - totalScroll);
+                featuredProductsGrid.scrollTo({
+                    left: currentScroll,
+                    behavior: 'smooth'
+                });
+            }
+        }
     }
-    
+
     if (sliderPrev && sliderNext) {
-        sliderPrev.addEventListener('click', function() {
-            currentSlide--;
-            updateSlider();
+        sliderPrev.addEventListener('click', () => scrollProducts('prev'));
+        sliderNext.addEventListener('click', () => scrollProducts('next'));
+        
+        // Initialize grid layout
+        featuredProductsGrid.style.display = 'flex';
+        featuredProductsGrid.style.gap = '1rem';
+        featuredProductsGrid.style.scrollBehavior = 'smooth';
+        featuredProductsGrid.style.overflowX = 'hidden';
+        
+        // Set initial width for all products
+        products.forEach(product => {
+            product.style.minWidth = `${featuredProductsGrid.clientWidth / productsToShow - 16}px`;
         });
-        
-        sliderNext.addEventListener('click', function() {
-            currentSlide++;
-            updateSlider();
-        });
-        
-        // Initialize slider
-        updateSlider();
-        
-        // Update slider on window resize
-        window.addEventListener('resize', updateSlider);
     }
     
     // Fan Art Tabs
@@ -114,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const productHtml = `
                     <div class="fan-art-product fade-in">
                         <a href="product-detail.html?id=${product.id}" class="fan-art-product-link" data-product-id="${product.id}">
-                            <div class="fan-art-product-image product-card-placeholder">
+                            <div class="fan-art-product-image" style="background-image: url('${product.image}'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 220px;">
                                 <button class="heart-button" aria-label="Add to favorites">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -143,31 +137,36 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 11,
                         title: "Enterprise Classic Graphic T-Shirt",
                         artist: "JohnBealDesign",
-                        price: 36.69
+                        price: 36.69,
+                        image: "assets/images/shop_fan_art/Enterprise-classic.jpg"
                     },
                     {
                         id: 12,
                         title: "Trek Spaceship in Space - The Great Wave Classic T-Shirt",
                         artist: "luciddreams",
-                        price: 27.14
+                        price: 27.14,
+                        image: "assets/images/shop_fan_art/Treak-spaceship.jpg"
                     },
                     {
                         id: 13,
                         title: "Space the final frontier Essential T-Shirt",
                         artist: "LiRoVi",
-                        price: 26.15
+                        price: 26.15,
+                        image: "assets/images/shop_fan_art/space_thefinal.jpg"
                     },
                     {
                         id: 14,
                         title: "USS Enterprise Star Trek Classic T-Shirt",
                         artist: "lighthouse-art",
-                        price: 24.85
+                        price: 24.85,
+                        image: "assets/images/shop_fan_art/uss_enterprice.jpg"
                     },
                     {
                         id: 15,
                         title: "Beam Me Up, Scotty Essential T-Shirt",
                         artist: "lighthouse-art",
-                        price: 27.14
+                        price: 27.14,
+                        image: "assets/images/shop_fan_art/beam_meup.jpg"
                     }
                 ];
             case 'Schitt\'s Creek':
@@ -176,7 +175,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 16,
                         title: "Im sorry I didnt respond to like one text, David! Sticker",
                         artist: " tiyashabhan",
-                        price: 1.69
+                        price: 1.69,
+                        image: "assets/images/shop_fan_art/beam_meup.jpg"
                     },
                     {
                         id: 17,
@@ -197,7 +197,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 21,
                         title: "Pan Am | Pan American Airways | Tail Fin Greeting Card",
                         artist: "darryldesign",
-                        price: 12.87
+                        price: 12.87,
+                        image: "assets/images/shop_fan_art/beam_meup.jpg"
                     },
                     {
                         id: 22,
@@ -230,7 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 26,
                         title: "Dune Universe Planets Glitch Logo Classic T-Shirt",
                         artist: "FifthSun",
-                        price: 25.74
+                        price: 25.74,
+                        image: "assets/images/shop_fan_art/beam_meup.jpg"
                     },
                     {
                         id: 27,
@@ -263,7 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         id: 31,
                         title: "Assassin's Creed Cryptic Symbol Essential T-Shirt",
                         artist: "Nerd Out!",
-                        price: 21.30
+                        price: 21.30,
+                        image: "assets/images/shop_fan_art/beam_meup.jpg"
                     },
                     {
                         id: 32,
@@ -416,4 +419,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         </style>
     `);
+
+    // Modal popup for Explore Designs
+    const modal = document.getElementById('product-modal');
+    const closeBtn = document.getElementById('product-modal-close');
+    const modalImage = document.querySelector('#product-modal .product-modal-image');
+    const modalTitle = document.querySelector('#product-modal .product-modal-title');
+    const modalArtist = document.querySelector('#product-modal .product-modal-artist');
+
+    document.querySelectorAll('.explore-design-card').forEach(card => {
+        card.addEventListener('click', () => {
+            // Set image
+            const cardImg = card.querySelector('.design-card-image');
+            if (cardImg && cardImg.style.backgroundImage) {
+                const match = cardImg.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+                if (match && match[1]) {
+                    modalImage.src = match[1];
+                } else {
+                    modalImage.src = 'assets/images/sample-product.jpg';
+                }
+            } else {
+                modalImage.src = 'assets/images/sample-product.jpg';
+            }
+            // Set title
+            const cardTitle = card.querySelector('.design-card-title');
+            if (cardTitle) {
+                modalTitle.textContent = cardTitle.textContent;
+            }
+            // Set artist
+            const cardArtist = card.querySelector('.design-card-artist');
+            if (cardArtist) {
+                modalArtist.textContent = cardArtist.textContent;
+            }
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    });
 });
