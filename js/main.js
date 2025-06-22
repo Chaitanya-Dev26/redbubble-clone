@@ -176,19 +176,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         title: "Im sorry I didnt respond to like one text, David! Sticker",
                         artist: " tiyashabhan",
                         price: 1.69,
-                        image: "assets/images/shop_fan_art/beam_meup.jpg"
+                        image: "assets/images/shop_fan_art/imsorry.jpg"
                     },
                     {
                         id: 17,
                         title: "Schitts Creek Nom Nom Alexis Classic T-Shirt",
                         artist: "Emily tong",
-                        price: 21.30
+                        price: 21.30,
+                        image: "assets/images/shop_fan_art/schitts-creek-nom-nom.jpg"
                     },
                     {
                         id: 18,
                         title: "Schitts Creek - Well, this town is very screamnastic - shitts",
                         artist: "CyberYogi",
-                        price: 1.67
+                        price: 1.67,
+                        image: "assets/images/shop_fan_art/schitts-creek-well.jpg"
                     },
                 ];
             case 'Pan Am':
@@ -198,31 +200,35 @@ document.addEventListener('DOMContentLoaded', function() {
                         title: "Pan Am | Pan American Airways | Tail Fin Greeting Card",
                         artist: "darryldesign",
                         price: 12.87,
-                        image: "assets/images/shop_fan_art/beam_meup.jpg"
+                        image: "assets/images/shop_fan_art/pan-am-american-airways.jpg"
                     },
                     {
                         id: 22,
                         title: "Pan Am Pan American World Airways Classic T-Shirt",
                         artist: "fomodesigns",
-                        price: 26.10
+                        price: 26.10,
+                        image: "assets/images/shop_fan_art/pan-am-world.jpg"
                     },
                     {
                         id: 23,
                         title: "Pan American World Airways Pan Am Classic T-Shirt",
                         artist: "fomodesigns",
-                        price: 22.19
+                        price: 22.19,
+                        image: "assets/images/shop_fan_art/pan-am-ground.jpg"
                     },
                     {
                         id: 24,
                         title: "Pan American World Airways Boeing 707-320 Jet Age Tail (Left Facing) Coffee Mug",
                         artist: "aspinworks",
-                        price: 15.22
+                        price: 15.22,
+                        image: "assets/images/shop_fan_art/pan-am-always.jpg"
                     },
                     {
                         id: 25,
                         title: "Caribbean Retro Vintage Travel Poster Poster",
                         artist: "vintagevivian",
-                        price: 21.44
+                        price: 21.44,
+                        image: "assets/images/shop_fan_art/pan-am-airlines.jpg"
                     }
                 ];
             case 'Dune':
