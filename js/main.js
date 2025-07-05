@@ -235,34 +235,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 return [
                     {
                         id: 26,
-                        title: "Dune Universe Planets Glitch Logo Classic T-Shirt",
+                        title: "Dune Master Of Blades Poster Oversized T-Shirt",
                         artist: "FifthSun",
-                        price: 25.74,
-                        image: "assets/images/shop_fan_art/beam_meup.jpg"
+                        price: 24.85,
+                        image: "assets/images/shop_fan_art/dune-master.jpg"
                     },
                     {
                         id: 27,
                         title: "Dune Universe Planets Emblem Classic T-Shirt",
                         artist: "FifthSun",
-                        price: 25.74
+                        price: 25.74,
+                        image: "assets/images/shop_fan_art/dune-universe.jpg"
                     },
                     {
                         id: 28,
                         title: "Dune House Atreides Distressed Badge Classic T-Shirt",
                         artist: "FifthSun",
-                        price: 25.20
+                        price: 25.20,
+                        image: "assets/images/shop_fan_art/dune-house.jpg"
                     },
                     {
                         id: 29,
                         title: "Dune Fear Is The Mind Killer Lightweight Hoodie",
                         artist: "FifthSun",
-                        price: 64.01
+                        price: 64.01,
+                        image: "assets/images/shop_fan_art/dune-fear.jpg"
                     },
                     {
                         id: 30,
                         title: "Dune Rule Yourself First Quote Classic T-Shirt",
                         artist: "FifthSun",
-                        price: 24.85
+                        price: 24.85,
+                        image: "assets/images/shop_fan_art/dune-rule.jpg"
                     }
                 ];
             case 'Assassin\'s Creed':
@@ -272,31 +276,35 @@ document.addEventListener('DOMContentLoaded', function() {
                         title: "Assassin's Creed Cryptic Symbol Essential T-Shirt",
                         artist: "Nerd Out!",
                         price: 21.30,
-                        image: "assets/images/shop_fan_art/beam_meup.jpg"
+                        image: "assets/images/shop_fan_art/assassins-cryptic.jpg"
                     },
                     {
                         id: 32,
                         title: "Assassin's Creed Pattern Sticker",
                         artist: "Fave101",
-                        price: 1.95
+                        price: 1.95,
+                        image: "assets/images/shop_fan_art/assassin-pattern.jpg"
                     },
                     {
                         id: 33,
-                        title: "Assassin's creed Sticker",
-                        artist: "urban-warriors",
-                        price: 1.53
+                        title: "Assassin's Creed - Stained Glass Series - 2 Sticker",
+                        artist: "HiddenRetro",
+                        price: 1.60,
+                        image: "assets/images/shop_fan_art/assassin-stained.jpg"
                     },
                     {
                         id: 34,
-                        title: "Eagle Bearer Warrior Essential T-Shirt",
-                        artist: "Hypertwenty Designs",
-                        price: 24.85
+                        title: "Nyassassin Sticker",
+                        artist: "EddySP",
+                        price: 1.67,
+                        image: "assets/images/shop_fan_art/assassin-ny.jpg"
                     },
                     {
                         id: 35,
-                        title: "Assassin's Creed - Stained Glass Series - 2 Graphic T-Shirt",
-                        artist: "HiddenRetro",
-                        price: 34.82
+                        title: "Assassin's Creed games Poster",
+                        artist: "KafeMo",
+                        price: 13.24,
+                        image: "assets/images/shop_fan_art/assassin-games.jpg"
                     }
                 ];
             default:
