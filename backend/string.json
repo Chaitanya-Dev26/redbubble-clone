@@ -1,0 +1,22 @@
+[
+  {
+    "id": 87,
+    "title": "string",
+    "slug": "string",
+    "price": 100,
+    "description": "string",
+    "category": {
+      "id": 42,
+      "name": "string",
+      "slug": "string",
+      "image": "https://pravatar.cc/",
+      "creationAt": "2025-09-15T21:03:06.000Z",
+      "updatedAt": "2025-09-15T21:03:06.000Z"
+    },
+    "images": [
+      "https://pravatar.cc/"
+    ],
+    "creationAt": "2025-09-15T21:03:06.000Z",
+    "updatedAt": "2025-09-15T21:03:06.000Z"
+  }
+]

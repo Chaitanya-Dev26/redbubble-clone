@@ -1,0 +1,22 @@
+[
+  {
+    "id": 135,
+    "title": "Oswaldo",
+    "slug": "oswaldo",
+    "price": 150,
+    "description": "OSWALDO!!!!",
+    "category": {
+      "id": 43,
+      "name": "category_B",
+      "slug": "category-b",
+      "image": "https://pravatar.cc/",
+      "creationAt": "2025-09-15T21:03:16.000Z",
+      "updatedAt": "2025-09-15T21:03:16.000Z"
+    },
+    "images": [
+      "https://images7.memedroid.com/images/UPLOADED659/67850ab737fe4.jpeg"
+    ],
+    "creationAt": "2025-09-16T01:18:53.000Z",
+    "updatedAt": "2025-09-16T01:18:53.000Z"
+  }
+]

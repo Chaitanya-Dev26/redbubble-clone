@@ -68,11 +68,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fan Art Tabs
     const tabButtons = document.querySelectorAll('.tab-button');
     const fanArtProducts = document.querySelector('.fan-art-products');
+    const seeMoreLink = document.querySelector('.fan-art .see-more-link');
     
     // Initialize first tab
     const activeTab = document.querySelector('.tab-button.active');
     if (activeTab) {
         updateFanArtProducts(activeTab.textContent);
+        updateSeeMoreLink(activeTab.textContent);
     }
     
     // Add click handlers for tab buttons
@@ -86,6 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update fan art products based on category
             updateFanArtProducts(this.textContent);
+            
+            // Update the "Shop X merch" link text
+            updateSeeMoreLink(this.textContent);
         });
     });
     
@@ -312,6 +317,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Function to update the "Shop X merch" link text
+    function updateSeeMoreLink(category) {
+        if (seeMoreLink) {
+            seeMoreLink.textContent = `Shop ${category} merch`;
+        }
+    }
 
     // Heart buttons for favorites
     const heartButtons = document.querySelectorAll('.heart-button');

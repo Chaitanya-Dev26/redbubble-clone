@@ -1,0 +1,22 @@
+[
+  {
+    "id": 136,
+    "title": "contoh",
+    "slug": "contoh",
+    "price": 10000,
+    "description": "loremipsum",
+    "category": {
+      "id": 12,
+      "name": "nueva categoria",
+      "slug": "nueva-categoria",
+      "image": "https://placeimg.com/640/480/any",
+      "creationAt": "2025-09-15T19:18:33.000Z",
+      "updatedAt": "2025-09-15T19:18:33.000Z"
+    },
+    "images": [
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ruparupa.com%2Finformastore%2Fjual%2Fmeja-manager%3Fquery%3Dmeja%2520manager&psig=AOvVaw1m9Mx1HQg523tVWNyx6ggs&ust=1757652631498000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCLjJ8rf0z48DFQAAAAAdAAAAABAE"
+    ],
+    "creationAt": "2025-09-16T02:22:30.000Z",
+    "updatedAt": "2025-09-16T02:22:30.000Z"
+  }
+]
