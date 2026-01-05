@@ -129,5 +129,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special thanks to all open-source projects that made this possible
 
 ---
-
-*Built with ❤️ and vanilla web technologies*
